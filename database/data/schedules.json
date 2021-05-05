@@ -1,0 +1,58 @@
+[
+    {
+    "id": 1,
+    "name": "Full Time Jobs",
+    "class": "bg-green-500",
+    "published_at": "2021-01-13T01:53:10.034Z",
+    "created_at": "2021-01-13T01:52:42.562Z",
+    "updated_at": "2021-01-13T01:53:10.062Z"
+    },
+    {
+    "id": 2,
+    "name": "Temporary Staff",
+    "class": "bg-yellow-500",
+    "published_at": "2021-01-13T01:54:52.324Z",
+    "created_at": "2021-01-13T01:54:29.787Z",
+    "updated_at": "2021-01-13T01:54:52.355Z"
+    },
+    {
+    "id": 3,
+    "name": "1st, 2nd, and 3rd Shift",
+    "class": "bg-indigo-500",
+    "published_at": "2021-01-13T01:54:45.545Z",
+    "created_at": "2021-01-13T01:54:42.066Z",
+    "updated_at": "2021-01-13T01:54:45.592Z"
+    },
+    {
+    "id": 4,
+    "name": "Direct Hire",
+    "class": "bg-green-700",
+    "published_at": "2021-01-27T01:05:51.456Z",
+    "created_at": "2021-01-27T01:05:48.377Z",
+    "updated_at": "2021-01-27T01:05:51.493Z"
+    },
+    {
+    "id": 5,
+    "name": "Temp-to-hire",
+    "class": "bg-yellow-700",
+    "published_at": "2021-01-27T01:06:31.190Z",
+    "created_at": "2021-01-27T01:06:29.041Z",
+    "updated_at": "2021-01-27T01:06:31.231Z"
+    },
+    {
+    "id": 6,
+    "name": "On-Site",
+    "class": "bg-indigo-700",
+    "published_at": "2021-01-27T01:07:00.012Z",
+    "created_at": "2021-01-27T01:06:57.318Z",
+    "updated_at": "2021-01-27T01:07:00.045Z"
+    },
+    {
+    "id": 7,
+    "name": "Payrolling",
+    "class": "bg-pink-500",
+    "published_at": "2021-01-27T01:07:29.442Z",
+    "created_at": "2021-01-27T01:07:27.368Z",
+    "updated_at": "2021-01-27T01:07:29.473Z"
+    }
+]
