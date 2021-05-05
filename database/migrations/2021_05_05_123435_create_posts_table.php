@@ -15,7 +15,21 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->string('title');
+            $table->string('position');
+            $table->string('responsibilities');
+            $table->string('qualifications');
+            $table->float('min_salary',10,2);
+            $table->float('max_salary',10,2);
+            $table->string('schedule');
+            $table->string('class');
+            $table->text('body');
+            $table->string('state');
+            $table->string('city');
+            $table->integer('active');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
