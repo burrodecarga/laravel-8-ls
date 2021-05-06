@@ -1,7 +1,7 @@
 <x-table>
     <x-marco>
-        <div class="flex">
-            <select class="rounded my-5 mx-2 text-sm" wire:model = "paginate">
+        <div class="flex flex-1 mx-2 text-sm">
+            <select class="rounded mx-2 text-sm" wire:model = "paginate">
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
@@ -9,15 +9,16 @@
                 <option value="50">50</option>
                 <option value="100">100</option>
             </select>
-            <input type="text" class="form-search text-sm my-5  w-1/3 text-gray-600 p-3 rounded" placeholder="Search by Name or By Email" wire:model = "search">
-            <select class="rounded my-5 mx-2 text-sm" wire:model = "user_role">
+            <input type="text" class="rounded mx-2 text-sm w-1/3" placeholder="Search by Name or by Email" wire:model = "search">
+            <select class="rounded mx-2 text-sm" wire:model = "user_role">
                 <option value="">role</option>
                 <option value="guest">guest</option>
                 <option value="candidate">candidate</option>
                 <option value="employer">employer</option>
                 <option value="admin">admin</option>
             </select>
-            <button class="bg-red-500 hover:bg-red-700 text-sm my-5 ml-3 p-3 rounded text-white" wire:click ="clear">
+            <button class="bg-red-500 hover:bg-red-700
+            rounded mx-2 px-2 text-sm text-white" wire:click ="clear">
                 clear
               </button>
         </div>
@@ -97,5 +98,5 @@
         {{$users->links()}}
     </div>
     </x-marco>
-
 </x-table>
+@livewire('show-user-modal')

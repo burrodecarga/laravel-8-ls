@@ -15,7 +15,7 @@ class ListOfUsers extends Component
     public $campo = null;
     public $order = null;
     public $icon  = '-circle';
-    public $mostrar = 'hidden';
+    public $showModal = 'hidden';
     protected $queryString = ['search', 'order', 'campo'];
 
 
@@ -82,5 +82,10 @@ class ListOfUsers extends Component
     {
         $this->campo = $this->campo;
         $this->icon = $this->iconDirection($this->order);
+    }
+
+    public function showModal(User $user)
+    {
+       $this->emit('showModal',$user);
     }
 }
