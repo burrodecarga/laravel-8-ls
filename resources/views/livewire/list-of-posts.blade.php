@@ -1,6 +1,6 @@
 <x-table>
     <x-marco>
-        <div class="flex flex-1 mx-2 text-sm">
+        <div class="flex flex-1 mx-2 text-sm items-center">
             <select class="rounded mx-2 text-sm" wire:model="paginate">
                 <option value="5">5</option>
                 <option value="10">10</option>
@@ -29,10 +29,11 @@
                 <option value="{{$schedule}}">{{$schedule}}</option>
                 @endforeach
             </select>
-            <button class="border-transparent bg-red-500 hover:bg-red-700 text-sm rounded px-2 text-white"
+            <button class="border-transparent bg-red-500 hover:bg-red-700 text-sm rounded mx-2 py-2 px-3 text-white"
                 wire:click="clear">
                 clear
             </button>
+            @livewire('create-post')
         </div>
     </x-marco>
     @if (!$posts->count())
@@ -49,19 +50,22 @@
                             <thead class="bg-gray-50">
                                 <tr>
                                     <th scope="col"
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                        wire:click = "sorted('title')">
                                         Offers
                                     </th>
                                     <th scope="col"
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                        wire:click = "sorted('state')">
                                         Location
                                     </th>
                                     <th scope="col"
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                        wire:click = "sorted('schedule')">
                                         Schedule
                                     </th>
                                     <th scope="col"
-                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Action
                                     </th>
                                 </tr>

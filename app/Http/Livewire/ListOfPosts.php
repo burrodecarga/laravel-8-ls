@@ -53,6 +53,30 @@ class ListOfPosts extends Component
         );
     }
 
+    public function sorted($campo)
+    {
+
+        if ($this->campo !== $campo) {
+            $this->order = null;
+        }
+
+        switch ($this->order) {
+            case null:
+                $this->order = 'asc';
+                break;
+            case 'asc':
+                $this->order = 'desc';
+                break;
+            case 'desc':
+                $this->order = null;
+                break;
+        }
+
+        $this->campo = $campo;
+        $this->icon = $this->iconDirection($this->order);
+    }
+
+
     public function updatingSearch()
     {
         $this->resetPage();
