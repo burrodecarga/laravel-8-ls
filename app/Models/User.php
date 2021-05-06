@@ -28,7 +28,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','role',
     ];
 
     /**
@@ -60,4 +60,20 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+    public function scopeTermino($query,$termino)
+    {
+       if($termino === ''){ return;}
+       return $query->where('name','like',"%{$termino}%")
+                   ->orWhere('name','like',"%{$termino}%");
+    }
+
+    public function scopeRole($query,$role)
+    {
+        if($role === ''){ return;}
+        return $query->where('role',$role);
+    }
+
+
 }
