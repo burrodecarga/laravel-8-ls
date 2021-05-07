@@ -21,12 +21,13 @@ class ListOfPosts extends Component
     public $campo = null;
     public $order = null;
     public $showPost='hidden';
+    public $idPost = null;
 
     public $icon  = '-circle';
     public $mostrar = 'hidden';
 
     protected $queryString = ['search', 'order', 'campo','schedule'];
-    protected $listeners = ['render'];
+    protected $listeners = ['render','delete','delPost'];
 
 
 
@@ -110,5 +111,34 @@ class ListOfPosts extends Component
     {
       $this->emit('showPost',$post);
     }
-    
+
+    public function delPost()
+    {
+        $post = Post::find($this->idPost);
+        $post->delete();
+        $this->dispatchBrowserEvent('deleted');
+        //$this->render();
+    }
+
+    public function confirmDelete($idPost)
+    {
+       $this->idPost =$idPost;
+       $this->dispatchBrowserEvent('show-confirm-delete');
+    }
+
+    public function pubPost(Post $post){
+    if($post->active == 1){
+        $post->active=0;
+        $message ='Job offer was unpublished successfully';
+    }else{
+        $post->active=1;
+        $message = 'Job offer was published successfully';
+    }
+     $post->save();
+     $this->render();
+        $this->showPost = false;
+        $this->emit('alert',$message);
+
+}
+
 }

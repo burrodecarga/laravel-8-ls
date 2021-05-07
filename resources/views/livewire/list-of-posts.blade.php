@@ -122,20 +122,25 @@
                                         <p class="{{$post->class}} w-50 p-2">{{$post->schedule}}</p>
                                     </td>
                                 </td>
-                                <td class="px-6 py-4 text-sm text-white text-center">
-                                    <p class="{{$post->active==1 ? 'bg-green-700 rounded-full':'bg-red-700 rounded-full'}} w-10 p-2">{{$post->active==1 ? 'Y':'N'}}</p>
+                                <td class="px-6 py-4 text-sm text-white text-center cursor-pointer">
+                                    <p class="{{$post->active==1 ? 'bg-green-700 rounded-full':'bg-red-700 rounded-full'}} w-10 p-2"
+                                        wire:click="pubPost({{$post->id}})"
+                                        >{{$post->active==1 ? 'Y':'N'}}</p>
                                 </td>
 
 
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center cursor-pointer">
                                         <a href="javascript:void(0)" wire:click="showPost({{$post->id}})"><img
                                                 src="{{asset('assets/svg/editar.svg')}} " alt="{{{$post->title}}}"
                                                 width="25px"></a>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center">
-                                        <a href="javascript:void(0)" wire:click="showPost({{$post->id}})"><img
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center cursor-pointer">
+                                        <a href="javascript:void(0)"
+                                        wire:click.prevent="confirmDelete({{$post->id }})">
+                                        <img
                                                 src="{{asset('assets/svg/delete.svg')}} " alt="{{{$post->title}}}"
-                                                width="25px"></a>
+                                                width="25px">
+                                            </a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -152,4 +157,9 @@
     @endif
 </x-table>
 @livewire('show-post')
+@push('scripts')
+<script>
+
+</script>
+@endpush
 
