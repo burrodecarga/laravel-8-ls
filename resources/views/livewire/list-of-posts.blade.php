@@ -8,6 +8,7 @@
                 <option value="25">25</option>
                 <option value="50">50</option>
                 <option value="100">100</option>
+                <option value="200">200</option>
             </select>
             <input id="m1" wire:model="search" type="text" class="rounded mx-2 text-sm">
             <select class="rounded mx-2 text-sm" wire:model="max_salary">
@@ -53,27 +54,38 @@
                                         class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                                         wire:click = "sorted('title')">
                                         Offers
+                                        <span class="fa fa{{$campo === 'title' ? $icon : '-circle'}}"></span>
                                     </th>
                                     <th scope="col"
                                         class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                                         wire:click = "sorted('state')">
                                         Location
+                                        <span class="fa fa{{$campo === 'state' ? $icon : '-circle'}}"></span>
                                     </th>
                                     <th scope="col"
                                         class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                                         wire:click = "sorted('schedule')">
                                         Schedule
+                                        <span class="fa fa{{$campo === 'schedule' ? $icon : '-circle'}}"></span>
                                     </th>
                                     <th scope="col"
-                                        class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider "
+                                        wire:click = "sorted('active')">
+                                       Publish
+                                       <span class="fa fa{{$campo === 'active' ? $icon : '-circle'}}"></span>
+                                    </th>
+                                    <th scope="col"
+                                        class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20"
+                                        colspan="2">
                                         Action
                                     </th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
                                 @foreach ($posts as $post )
+
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td class="px-6 py-4">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 h-10 w-10">
                                                 <a href="#"> <img class="h-10 w-10 rounded"
@@ -81,9 +93,10 @@
                                                 </a>
                                             </div>
                                             <div class="ml-4">
-                                                <div class="text-sm font-medium text-gray-900">
+                                                <div class="text-sm text-gray-900 font-bold">
                                                     {{$post->title}}<br>
-                                                {{$post->created_at->subMinutes(2)->diffForHumans()}}
+                                                 <span class="font-medium">  {{$post->created_at->subMinutes(2)->diffForHumans()}}</span>
+
                                                 </div>
                                                 <div class="text-sm text-gray-500">
                                                     {{$post->min_salary}} $ - {{$post->max_salary}} $
@@ -92,21 +105,36 @@
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="flex text-sm text-gray-900">
+                                        <div class="flex flex-center text-sm text-gray-900">
                                             <img src="{{ asset('assets/jobs/pin.svg')}} " alt="{{$post->city}}"
-                                                class="w-3">
-                                            {{$post->state}}
+                                                class="w-3 mr-2">
+
+
+                                        <div class="text-sm text-gray-500 flex flex-col">
+                                            <span class="font-bold">
+                                              {{$post->state}}
+                                            </span>
+                                            <span>{{$post->city}}</span>
                                         </div>
-                                        <div class="text-sm text-gray-500">
-                                            {{$post->city}}
-                                        </div>
+                                      </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center">
-                                        <p class="{{$post->class}} w-80 p-2">{{$post->schedule}}</p>
+                                        <p class="{{$post->class}} w-50 p-2">{{$post->schedule}}</p>
                                     </td>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-white text-center">
+                                    <p class="{{$post->active==1 ? 'bg-green-700 rounded-full':'bg-red-700 rounded-full'}} w-10 p-2">{{$post->active==1 ? 'Y':'N'}}</p>
+                                </td>
+
+
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center">
-                                        <a href="javascript:void(0)" wire:click="editPost({{$post->id}})"><img
+                                        <a href="javascript:void(0)" wire:click="showPost({{$post->id}})"><img
                                                 src="{{asset('assets/svg/editar.svg')}} " alt="{{{$post->title}}}"
+                                                width="25px"></a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center">
+                                        <a href="javascript:void(0)" wire:click="showPost({{$post->id}})"><img
+                                                src="{{asset('assets/svg/delete.svg')}} " alt="{{{$post->title}}}"
                                                 width="25px"></a>
                                     </td>
                                 </tr>
@@ -123,4 +151,5 @@
     </div>
     @endif
 </x-table>
+@livewire('show-post')
 

@@ -20,12 +20,15 @@ class ListOfPosts extends Component
     public $paginate = 5;
     public $campo = null;
     public $order = null;
+    public $showPost='hidden';
 
     public $icon  = '-circle';
     public $mostrar = 'hidden';
 
     protected $queryString = ['search', 'order', 'campo','schedule'];
     protected $listeners = ['render'];
+
+
 
     public function render()
     {
@@ -36,14 +39,13 @@ class ListOfPosts extends Component
         $posts = Post::termino($this->search)
         ->state($this->state)
         ->salary($this->max_salary)
-        ->schedule($this->schedule)
-        ->orderBy('created_at','desc');
+        ->schedule($this->schedule);
 
         if ($this->campo && $this->order) {
             $posts = $posts->orderBy($this->campo, $this->order);
         }
 
-        $posts = $posts->paginate($this->paginate);
+        $posts = $posts->orderBy('created_at','desc')->paginate($this->paginate);
         return view(
             'livewire.list-of-posts',
             [
@@ -104,9 +106,9 @@ class ListOfPosts extends Component
         $this->icon = $this->iconDirection($this->order);
     }
 
-    public function editPost(Post $post)
+    public function showPost(Post $post)
     {
-        $this->emitTo('editPost',$post);
+      $this->emit('showPost',$post);
     }
-
+    
 }

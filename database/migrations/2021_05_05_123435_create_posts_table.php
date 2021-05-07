@@ -17,14 +17,15 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->string('title');
-            $table->string('position');
-            $table->string('responsibilities');
-            $table->string('qualifications');
+            $table->longText('body');
+            $table->longText('position');
+            $table->longText('responsibilities');
+            $table->longText('qualifications');
             $table->float('min_salary',10,2);
             $table->float('max_salary',10,2);
             $table->string('schedule');
             $table->string('class');
-            $table->text('body');
+
             $table->string('state');
             $table->string('city');
             $table->integer('active');
