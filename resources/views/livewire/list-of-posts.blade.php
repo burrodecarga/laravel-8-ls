@@ -29,7 +29,7 @@
                 <option value="{{$schedule}}">{{$schedule}}</option>
                 @endforeach
             </select>
-            <button class="border-transparent bg-red-500 hover:bg-red-700 text-sm rounded mx-2 py-2 px-3 text-white"
+            <button class="border-none bg-red-500 hover:bg-red-700 text-sm rounded mx-2 py-2 px-3 text-white"
                 wire:click="clear">
                 clear
             </button>
@@ -82,7 +82,8 @@
                                             </div>
                                             <div class="ml-4">
                                                 <div class="text-sm font-medium text-gray-900">
-                                                    {{$post->title}}
+                                                    {{$post->title}}<br>
+                                                {{$post->created_at->subMinutes(2)->diffForHumans()}}
                                                 </div>
                                                 <div class="text-sm text-gray-500">
                                                     {{$post->min_salary}} $ - {{$post->max_salary}} $

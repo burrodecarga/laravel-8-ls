@@ -44,16 +44,16 @@
                     <div x-show="openTab === 1">
                         <div class="mb-4">
                             <x-jet-label value="offer title" class="bold" />
-                            <x-jet-input type="text" class="w-full" name="title" />
+                            <x-jet-input type="text" class="w-full" name="title" wire:model.defer="title" />
                         </div>
                         <div class="mb-4">
                             <x-jet-label value="position" class="bold" />
-                            <x-jet-input type="text" class="w-full" name="position" />
+                            <x-jet-input type="text" class="w-full" name="position" wire:model.defer="position"/>
                         </div>
                         <div class="flex flex-1">
                             <div class="mb-4 w-1/2 mr-2">
                                 <x-jet-label value="state" class="bold" />
-                                <select class="form-control w-full">
+                                <select class="form-control w-full" wire:model.defer="schedule">
                                     <option>Schedule</option>
                                     @foreach ($schedules as $schedule )
                                     <option value="{{$schedule}}">{{$schedule}}</option>
@@ -62,33 +62,34 @@
                             </div>
                             <div class="mb-4">
                                 <x-jet-label value="min salary" class="bold" />
-                                <x-jet-input type="text" class="w-full" name="min_salary" />
+                                <x-jet-input type="text" class="w-full" name="min_salary" wire:model.defer="min_salary"/>
                             </div>
                             <div class="mb-4 mx-2">
                                 <x-jet-label value="max salary" class="bold" />
-                                <x-jet-input type="text" class="w-full" name="max_salary" />
+                                <x-jet-input type="text" class="w-full" name="max_salary" wire:model.defer="max_salary"/>
                             </div>
                         </div>
                     </div>
                     <div x-show="openTab === 2">
                         <div class="mb-4">
-                            <x-jet-label value="responsibilities" class="bold" />
-                            <textarea class="w-full form-control" col="6" name="responsibilities"></textarea>
+                            <x-jet-label value="body" class="bold" />
+                            <textarea class="w-full form-control" col="6" name="body" wire:model.defer="body"></textarea>
                         </div>
                         <div class="mb-4">
-                            <x-jet-label value="body" class="bold" />
-                            <textarea class="w-full form-control" col="6" name="body"></textarea>
+                            <x-jet-label value="responsibilities" class="bold" />
+                            <textarea class="w-full form-control" col="6" name="responsibilities" wire:model.defer="responsibilities"></textarea>
                         </div>
+
                         <div class="mb-4">
                             <x-jet-label value="qualifications" class="bold" />
-                            <textarea class="w-full form-control" col="6" name="qualifications"></textarea>
+                            <textarea class="w-full form-control" col="6" name="qualifications" wire:model.defer="qualifications"></textarea>
                         </div>
                     </div>
                     <div x-show="openTab === 3">
 
                         <div class="mb-4">
-                            <x-jet-label value="state" class="bold" />
-                            <select class="form-control w-full">
+                            <x-jet-label value="state" class="bold" wire:model.defer="state" />
+                            <select class="form-control w-full" wire:model="state" >
                                 <option>Select State</option>
                                 @foreach ($states as $state )
                                 <option value="{{$state}}">{{$state}}</option>
@@ -97,7 +98,7 @@
                         </div>
                         <div class="mb-4">
                             <x-jet-label value="city" class="bold" />
-                            <x-jet-input type="text" class="w-full" name="city" />
+                            <x-jet-input type="text" class="w-full" name="city" wire:model.defer="city"/>
                         </div>
 
                     </div>
@@ -109,7 +110,7 @@
                 <x-jet-secondary-button wire:click="$set('open',false)">
                     Cancel
                 </x-jet-secondary-button>
-                <x-jet-danger-button>
+                <x-jet-danger-button wire:click="create()">
                     Save
                 </x-jet-danger-button>
             </div>

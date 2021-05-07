@@ -25,6 +25,7 @@ class ListOfPosts extends Component
     public $mostrar = 'hidden';
 
     protected $queryString = ['search', 'order', 'campo','schedule'];
+    protected $listeners = ['render'];
 
     public function render()
     {
@@ -35,7 +36,8 @@ class ListOfPosts extends Component
         $posts = Post::termino($this->search)
         ->state($this->state)
         ->salary($this->max_salary)
-        ->schedule($this->schedule);
+        ->schedule($this->schedule)
+        ->orderBy('created_at','desc');
 
         if ($this->campo && $this->order) {
             $posts = $posts->orderBy($this->campo, $this->order);
