@@ -105,7 +105,7 @@
                                         <p class="{{$post->class}} w-80 p-2">{{$post->schedule}}</p>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center">
-                                        <a href="javascript:void(0)" wire:click="showModal({{$post->id}})"><img
+                                        <a href="javascript:void(0)" wire:click="editPost({{$post->id}})"><img
                                                 src="{{asset('assets/svg/editar.svg')}} " alt="{{{$post->title}}}"
                                                 width="25px"></a>
                                     </td>
@@ -123,3 +123,4 @@
     </div>
     @endif
 </x-table>
+

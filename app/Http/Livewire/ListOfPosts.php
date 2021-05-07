@@ -104,4 +104,9 @@ class ListOfPosts extends Component
         $this->icon = $this->iconDirection($this->order);
     }
 
+    public function editPost(Post $post)
+    {
+        $this->emitTo('editPost',$post);
+    }
+
 }

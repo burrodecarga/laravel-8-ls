@@ -99,4 +99,4 @@
     </div>
     </x-marco>
 </x-table>
-@livewire('show-user-modal')
+

@@ -45,10 +45,12 @@
                         <div class="mb-4">
                             <x-jet-label value="offer title" class="bold" />
                             <x-jet-input type="text" class="w-full" name="title" wire:model.defer="title" />
+                            <x-jet-input-error for="title"/>
                         </div>
                         <div class="mb-4">
                             <x-jet-label value="position" class="bold" />
                             <x-jet-input type="text" class="w-full" name="position" wire:model.defer="position"/>
+                            <x-jet-input-error for="position"/>
                         </div>
                         <div class="flex flex-1">
                             <div class="mb-4 w-1/2 mr-2">
@@ -59,14 +61,17 @@
                                     <option value="{{$schedule}}">{{$schedule}}</option>
                                     @endforeach
                                     <select>
+                                <x-jet-input-error for="schedule"/>
                             </div>
                             <div class="mb-4">
                                 <x-jet-label value="min salary" class="bold" />
                                 <x-jet-input type="text" class="w-full" name="min_salary" wire:model.defer="min_salary"/>
+                                <x-jet-input-error for="min_salary"/>
                             </div>
                             <div class="mb-4 mx-2">
                                 <x-jet-label value="max salary" class="bold" />
                                 <x-jet-input type="text" class="w-full" name="max_salary" wire:model.defer="max_salary"/>
+                                <x-jet-input-error for="max_salary"/>
                             </div>
                         </div>
                     </div>
@@ -74,15 +79,18 @@
                         <div class="mb-4">
                             <x-jet-label value="body" class="bold" />
                             <textarea class="w-full form-control" col="6" name="body" wire:model.defer="body"></textarea>
+                            <x-jet-input-error for="body"/>
                         </div>
                         <div class="mb-4">
                             <x-jet-label value="responsibilities" class="bold" />
                             <textarea class="w-full form-control" col="6" name="responsibilities" wire:model.defer="responsibilities"></textarea>
+                            <x-jet-input-error for="responsibilities"/>
                         </div>
 
                         <div class="mb-4">
                             <x-jet-label value="qualifications" class="bold" />
                             <textarea class="w-full form-control" col="6" name="qualifications" wire:model.defer="qualifications"></textarea>
+                            <x-jet-input-error for="qualifications"/>
                         </div>
                     </div>
                     <div x-show="openTab === 3">
@@ -95,10 +103,12 @@
                                 <option value="{{$state}}">{{$state}}</option>
                                 @endforeach
                                 <select>
+                                    <x-jet-input-error for="state"/>
                         </div>
                         <div class="mb-4">
                             <x-jet-label value="city" class="bold" />
                             <x-jet-input type="text" class="w-full" name="city" wire:model.defer="city"/>
+                            <x-jet-input-error for="city"/>
                         </div>
 
                     </div>
@@ -110,7 +120,7 @@
                 <x-jet-secondary-button wire:click="$set('open',false)">
                     Cancel
                 </x-jet-secondary-button>
-                <x-jet-danger-button wire:click="create()">
+                <x-jet-danger-button wire:click="create()" wire:loading.attr="disabled">
                     Save
                 </x-jet-danger-button>
             </div>
