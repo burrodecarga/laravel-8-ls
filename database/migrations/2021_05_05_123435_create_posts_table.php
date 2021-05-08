@@ -16,6 +16,8 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->bigInteger('employer_id')->unsigned()->nullable();
+            $table->bigInteger('candidate_id')->unsigned()->nullable();
             $table->string('title');
             $table->longText('body');
             $table->longText('position');
@@ -30,8 +32,6 @@ class CreatePostsTable extends Migration
             $table->string('city');
             $table->integer('active');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')
-            ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

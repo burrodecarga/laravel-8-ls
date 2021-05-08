@@ -58,7 +58,8 @@ class CreatePost extends Component
             'class' => $class,
             'min_salary' => $this->min_salary,
             'max_salary' => $this->max_salary,
-            'active' => true
+            'active' => true,
+            'user_id' => auth()->user()->id
         ]);
 
         //       $this->reset();

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\ListOfJobs;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\ListOfPosts;
@@ -16,6 +17,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/users',ListOfUsers::class)->name('users');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/posts',ListOfPosts::class)->name('posts');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/jobs',ListOfJobs::class)->name('jobs');
 
 
 
