@@ -157,9 +157,5 @@
     @endif
 </x-table>
 @livewire('show-post')
-@push('scripts')
-<script>
 
-</script>
-@endpush
 

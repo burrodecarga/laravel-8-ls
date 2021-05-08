@@ -30,7 +30,8 @@ class CreatePostsTable extends Migration
             $table->string('city');
             $table->integer('active');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')
+            ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

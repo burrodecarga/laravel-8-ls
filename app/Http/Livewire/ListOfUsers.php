@@ -15,8 +15,12 @@ class ListOfUsers extends Component
     public $campo = null;
     public $order = null;
     public $icon  = '-circle';
-    public $showModal = 'hidden';
+    public $showUser = 'hidden';
     protected $queryString = ['search', 'order', 'campo'];
+    public $idUser = null;
+
+    protected $listeners = ['delUser','render'];
+
 
 
     public function render()
@@ -88,4 +92,24 @@ class ListOfUsers extends Component
     {
        $this->emit('showModal',$user);
     }
+
+    public function confirmDelete($idUser)
+    {
+      $this->idUser = $idUser;
+      $this->dispatchBrowserEvent('confirm-delete-user');
+    }
+
+    public function delUser()
+    {
+        $user = User::find($this->idUser);
+        $user->delete();
+        $this->dispatchBrowserEvent('deleted');
+    }
+
+    public function showUser(User $user)
+    {
+      $this->emit('showUser',$user);
+    }
+
+
 }

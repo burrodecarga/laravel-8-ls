@@ -38,8 +38,10 @@
                     Email
                     <span class="fa fa{{$campo === 'email' ? $icon : '-circle'}}"></span>
                 </th>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                wire:click="sorted('role')">
                  Role
+                 <span class="fa fa{{$campo === 'role' ? $icon : '-circle'}}"></span>
                 </th>
                 <th scope="col"
                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
@@ -47,8 +49,8 @@
                     Id
                     <span class="fa fa{{$campo === 'id' ? $icon : '-circle'}}"></span>
                 </th>
-                <th scope="col" class="relative px-6 py-3">
-                    <span class="sr-only">Edit</span>
+                <th scope="col" class="relative px-6 py-3" colspan="2">
+                    Action
                 </th>
             </tr>
         </thead>
@@ -83,9 +85,19 @@
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {{$user->id}}
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    wire:click="showModal({{$user->id}})">
-                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center cursor-pointer">
+                    <a href="javascript:void(0)" wire:click="showUser({{$user->id}})"><img
+                            src="{{asset('assets/svg/editar.svg')}} " alt="{{{$user->title}}}"
+                            width="25px"></a>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center cursor-pointer">
+                    <a href="javascript:void(0)"
+                    wire:click.prevent="confirmDelete({{$user->id }})">
+                    <img
+                            src="{{asset('assets/svg/delete.svg')}} " alt="{{{$user->title}}}"
+                            width="25px">
+                        </a>
                 </td>
             </tr>
             @endforeach
@@ -99,4 +111,5 @@
     </div>
     </x-marco>
 </x-table>
+@livewire('show-user')
 
