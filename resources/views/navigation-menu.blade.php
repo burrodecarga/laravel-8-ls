@@ -1,7 +1,9 @@
 @php($navLink = [
     ['href'=>'/dashboard', 'name'=>'dashboard', 'text'=>'Dashboard'  ],
     ['href'=>'/users', 'name'=>'users', 'text'=>'Users'  ],
-    ['href'=>'/posts', 'name'=>'posts', 'text'=>'posts'  ]
+    ['href'=>'/posts', 'name'=>'posts', 'text'=>'posts'  ],
+    ['href'=>'/roles-permissions', 'name'=>'roles', 'text'=>'Roles and Permissions'  ]
+])
 ])
 
 
