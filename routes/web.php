@@ -7,6 +7,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Livewire\ListOfPosts;
 use App\Http\Livewire\ListOfRoles;
 use App\Http\Livewire\ListOfUsers;
+use App\Http\Livewire\ShowJob;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,7 +28,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/roles-permissions',ListOf
 
 Route::resources([
     'roles' => RoleController::class,
-    
 ]);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/apply/{id}',[ShowJob::class,'apply'])->name('apply');
+
 // Route::middleware(['auth:sanctum', 'verified'])->get('/roles',[RoleController::class,'index'])->name('roles.index');
 

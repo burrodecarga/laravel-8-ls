@@ -2,13 +2,15 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Post;
+use Illuminate\Contracts\Queue\Job;
 use Livewire\Component;
 
 class ShowJob extends Component
 {
     protected $listeners = ['showJob'];
 
-    public $showJob = false;
+    public $showJob = '';
 
 
     public $title, $position, $responsibilities, $qualifications, $schedule, $class;
@@ -38,7 +40,7 @@ class ShowJob extends Component
         $this->schedule = $post['schedule'];
         $this->max_salary = $post['max_salary'];
         $this->min_salary = $post['min_salary'];
-        $this->showJob = true;
+        $this->prueba = '';
     }
 
     public function applyJob()
@@ -46,10 +48,15 @@ class ShowJob extends Component
 
         dd('');
         $this->emit('render');
-        $this->showJob = false;
+        $this->showJob = '';
         $this->emit('alert', 'Job offer was updated successfully');
         $this->reset();
 
+    }
+
+    public function apply($id)
+    {
+       
     }
 
 }

@@ -20,7 +20,7 @@ class ListOfJobs extends Component
     public $paginate = 5;
     public $campo = null;
     public $order = null;
-    public $showPost='hidden';
+    public $showJob='hidden';
     public $idPost = null;
 
     public $icon  = '-circle';
@@ -107,7 +107,7 @@ class ListOfJobs extends Component
 
     public function showJob(Post $post)
     {
-      $this->emit('showJob',$post);
+        $this->emit('showJob',$post);
     }
 
 }

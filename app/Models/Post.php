@@ -58,4 +58,9 @@ class Post extends Model
         return $query->where('max_salary','<=',$termino);
     }
 
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
 }
