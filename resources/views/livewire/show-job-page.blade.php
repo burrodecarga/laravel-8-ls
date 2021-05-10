@@ -1,5 +1,5 @@
 
-<div class="absolute inset-x-0 top-0 ">
+<div class="absolute inset-x-0 top-0 h-full my-6 ">
 <x-marco>
 <div class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen">

@@ -128,6 +128,12 @@
             </div>
         </x-slot>
         <x-slot name="footer">
+            <div class="text-justify">
+                <x-jet-input-error for="qualifications"/>
+            <x-jet-input-error for="responsibilities"/>
+            <x-jet-input-error for="body"/>
+            </div>
+
             <div>
                 <x-jet-secondary-button wire:click="$set('showPost',false)">
                     Cancel

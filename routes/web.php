@@ -2,8 +2,10 @@
 
 use App\Http\Livewire\ListOfJobs;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers;
+use App\Http\Controllers\RoleController;
 use App\Http\Livewire\ListOfPosts;
+use App\Http\Livewire\ListOfRoles;
 use App\Http\Livewire\ListOfUsers;
 
 Route::get('/', function () {
@@ -20,5 +22,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/posts',ListOfPosts::class
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/jobs',ListOfJobs::class)->name('jobs');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/roles-permissions',ListOfRoles::class)->name('roles-permissons');
 
+
+Route::resources([
+    'roles' => RoleController::class,
+    
+]);
+// Route::middleware(['auth:sanctum', 'verified'])->get('/roles',[RoleController::class,'index'])->name('roles.index');
 

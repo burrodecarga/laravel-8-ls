@@ -1,6 +1,4 @@
 <div class="relative">
-
-
 <x-table>
     <x-marco>
         <div class="flex flex-1 mx-2 text-sm items-center">

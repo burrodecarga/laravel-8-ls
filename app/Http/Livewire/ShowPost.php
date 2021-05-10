@@ -70,7 +70,6 @@ class ShowPost extends Component
 
     public function updatePost()
     {
-
         $values = $this->validate($this->rules);
         $this->post = Post::find($values['postId']);
         $slug = Str::slug($this->schedule);
