@@ -29,13 +29,17 @@
     Your browser does not support the video tag.
   </video>
   </div>
-
-  <form>
+  @if ($declare)
+     <form>
     <h3 class="text-green-500 font-medium">I declare that I watched the safety videos to be considered for the job <i class="fas fa-check text-green-800 font-bold"></i></h3>
   </form>
-
-    <button button class="bg-yellow-500 hover:bg-yellow-700
+  @else
+      <button button class="bg-yellow-500 hover:bg-yellow-700
     rounded mx-2 px-2 text-sm text-white" wire:click ="declare">I declare that I saw the security videos</button>
+  @endif
+
+
+
 
 
 

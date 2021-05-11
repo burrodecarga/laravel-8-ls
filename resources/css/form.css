@@ -1,3 +1,23 @@
 .form-control{
     @apply border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm
 }
+
+.form-table{
+    @apply w-full flex flex-row flex-no-wrap rounded-lg overflow-hidden sm:shadow-lg my-5
+}
+
+.form-table-tr{
+    @apply flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0
+}
+
+.form-table-body{
+    @apply flex-1 sm:flex-none
+}
+
+.form-tbody-tr{
+    @apply flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0
+}
+
+
+
+

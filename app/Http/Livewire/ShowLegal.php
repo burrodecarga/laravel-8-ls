@@ -10,10 +10,12 @@ class ShowLegal extends Component
 {
     public $postId;
     public $candidateId;
+    public $declare = false;
 
     public function render()
     {
-        return view('livewire.show-legal');
+        $this->declare = (auth()->user()->legals()->count() <> 0);
+        return view('livewire.show-legal',['declare'=>$this->declare]);
     }
 
     public function declare()
@@ -21,5 +23,8 @@ class ShowLegal extends Component
         Legal::create([
         'user_id'=> auth()->user()->id
         ]);
+        $this->declare = true;
+        $this->emit('alert', 'Your declaration has been registered');
+        $this->emit('render');
     }
 }

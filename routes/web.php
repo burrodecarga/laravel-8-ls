@@ -18,6 +18,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/laboral', function () {
+    return view('laboral.show');
+})->name('laboral');
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/users',ListOfUsers::class)->name('users');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/posts',ListOfPosts::class)->name('posts');
