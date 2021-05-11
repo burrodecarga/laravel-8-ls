@@ -3,7 +3,9 @@
     ['href'=>'/users', 'name'=>'users', 'text'=>'Users'  ],
     ['href'=>'/posts', 'name'=>'posts', 'text'=>'posts'  ],
     ['href'=>'/jobs', 'name'=>'jobs', 'text'=>'jobs'  ],
-    ['href'=>'/roles', 'name'=>'roles.index', 'text'=>'Roles'  ]
+    ['href'=>'/roles', 'name'=>'roles.index', 'text'=>'roles'  ],
+    ['href'=>'/legal', 'name'=>'legal.index', 'text'=>'legal'  ]
+
 ])
 
 

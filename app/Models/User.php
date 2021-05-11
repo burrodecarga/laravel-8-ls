@@ -77,7 +77,12 @@ class User extends Authenticatable
 
     public function posts()
     {
-        return $this->belongsToMany(Post::class);
+        return $this->belongsToMany(Post::class)->withTimestamps();
+    }
+
+    public function legals()
+    {
+        return $this->hasMany(Legal::class);
     }
 
 

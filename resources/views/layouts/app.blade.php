@@ -14,6 +14,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link href="{{asset('css/fontawesome-free-5.15.3-web/css/all.css')}} " rel="stylesheet">
+    <link href="{{asset('css/Apply.module.css')}} " rel="stylesheet">
 
 
     @livewireStyles

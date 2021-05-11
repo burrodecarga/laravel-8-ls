@@ -89,7 +89,15 @@
                 </div>
             </dl>
         </div>
-        <button class="bg-green-600 py-2 px-3 text-white hover:bg-green-300" wire:click="apply({{$postId}})">Apply</button>
+        @if (!$repetido)
+             <button class="bg-green-600 py-2 px-3 text-white hover:bg-green-300" wire:click="apply({{$postId}})">Apply</button>
+        @else
+          <p class="text-yellow-800 font-bold">
+              you have already applied to this offer
+          </p>
+        @endif
+
+        <button class="bg-red-600 py-2 px-3 text-white hover:bg-red-300" wire:click="$set('showJob','hidden')">Back</button>
     </div>
 </div>
 </x-marco>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class ShowJobPage extends Component
@@ -11,7 +12,7 @@ class ShowJobPage extends Component
     public $showJob='hidden';
 
 
-    public $title, $position, $responsibilities, $qualifications, $schedule, $class;
+    public $title, $position, $responsibilities, $qualifications, $schedule, $class,$repetido;
     public $min_salary, $max_salary, $state, $city, $body,$postId;
     public $post = null;
 
@@ -24,6 +25,8 @@ class ShowJobPage extends Component
     public function showJob($post)
     {
         $this->postId = $post['id'];
+        $this->repetido =$this->applyed($this->postId);
+        //dd($repetido);
         $this->title = $post['title'];
         $this->position = $post['position'];
         $this->body = $post['body'];
@@ -40,7 +43,20 @@ class ShowJobPage extends Component
 
     public function apply($id)
     {
-        dd($id);
+        Auth::user()->posts()->attach($id);
+        $this->emit('render');
+        $this->showJob = '';
+        $this->emit('alert', 'Job offer was attached successfully');
+        $this->reset();
+        redirect()->route('legal');
+
+    }
+
+    public function applyed($id)
+    {
+      $oldApply = Auth::user()->posts->pluck('id');
+      return $oldApply->contains($id);
+
     }
 
 

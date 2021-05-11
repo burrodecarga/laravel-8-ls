@@ -8,6 +8,7 @@ use App\Http\Livewire\ListOfPosts;
 use App\Http\Livewire\ListOfRoles;
 use App\Http\Livewire\ListOfUsers;
 use App\Http\Livewire\ShowJob;
+use App\Http\Livewire\ShowLegal;
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,5 +33,5 @@ Route::resources([
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/apply/{id}',[ShowJob::class,'apply'])->name('apply');
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/roles',[RoleController::class,'index'])->name('roles.index');
+Route::middleware(['auth:sanctum', 'verified'])->get('/legal',ShowLegal::class)->name('legal');
 
