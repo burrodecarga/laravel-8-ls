@@ -14,7 +14,23 @@ class Profile extends Model
         'address',
         'phone',
         'mobile',
-        'birthday',
-        'about'
+        'birthdate',
+        'about',
+        'cost',
+        'availability',
+        'title',
     ];
+
+    /* protected $dates = [
+        'birthdate'
+    ];
+ */
+    /* protected $casts = [
+        'birthdate' => 'datetime:d-m-Y',
+    ];
+ */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

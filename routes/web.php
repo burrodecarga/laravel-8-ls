@@ -9,6 +9,8 @@ use App\Http\Livewire\ListOfRoles;
 use App\Http\Livewire\ListOfUsers;
 use App\Http\Livewire\ShowJob;
 use App\Http\Livewire\ShowLegal;
+use App\Http\Livewire\UserExperience;
+use App\Http\Livewire\UserProfile;
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,3 +42,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/apply/{id}',[ShowJob::cla
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/legal',ShowLegal::class)->name('legal');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/user-profile',UserProfile::class)->name('user-profile');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/experiences',UserExperience::class)->name('experiences');

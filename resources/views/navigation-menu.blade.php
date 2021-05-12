@@ -112,7 +112,7 @@
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{ route('laboral') }}">
+                            <x-jet-dropdown-link href="{{ route('user-profile') }}">
                                 {{ __('Laboral Profile') }}
                             </x-jet-dropdown-link>
 

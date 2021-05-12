@@ -15,13 +15,11 @@ class CreateSkillsTable extends Migration
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->string('category')->nullable();
-            $table->string('skill')->nullable();
-            $table->integer('level')->nullable();
+            $table->string('category');
+            $table->string('name');
+            $table->string('tag')->default('general');
+            $table->integer('level')->default(1);
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
         });
     }
 

@@ -16,10 +16,14 @@ class CreateProfilesTable extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->string('title')->nullable();
             $table->string('address')->nullable();
+            $table->float('cost',10,2)->nullable();
+            $table->enum('availability',['More than 30 hrs/week','Less than 30 hrs/week','As needed - open to offers']);
+            $table->longText('about')->nullable();
             $table->string('phone')->nullable();
             $table->string('mobile')->nullable();
-            $table->date('birthday')->nullable();
+            $table->date('birthdate')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

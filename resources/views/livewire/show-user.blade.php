@@ -1,6 +1,5 @@
 <form wire:submit.prevent="updateUser">
 <x-jet-dialog-modal wire:model="showUser">
-
     <x-slot name="title">
         <div class="sm:flex sm:items-start md:items-center">
             <div

@@ -10,10 +10,9 @@ class Skill extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id',
         'category',
-        'skill',
+        'name',
+        'tag',
         'level',
-
     ];
 }
