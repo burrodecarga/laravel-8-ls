@@ -1,0 +1,597 @@
+[
+    {
+        "id": 1,
+        "category_id": 1,
+        "category": "Accounting & Consulting",
+        "name": "Accounting",
+        "slug": "accounting"
+    },
+    {
+        "id": 2,
+        "category_id": 2,
+        "category": "Admin Support",
+        "name": "Human Resources",
+        "slug": "human-resources"
+    },
+    {
+        "id": 3,
+        "category_id": 1,
+        "category": "Accounting & Consulting",
+        "name": "Other - Accounting & Consulting",
+        "slug": "other-accounting-consulting"
+    },
+    {
+        "id": 4,
+        "category_id": 1,
+        "category": "Accounting & Consulting",
+        "name": "Financial Planning",
+        "slug": "financial-planning"
+    },
+    {
+        "id": 5,
+        "category_id": 1,
+        "category": "Accounting & Consulting",
+        "name": "Management Consulting",
+        "slug": "management-consulting"
+    },
+    {
+        "id": 6,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "Data Entry",
+        "slug": "data-entry"
+    },
+    {
+        "id": 7,
+        "category_id": 2,
+        "category": "Admin Support",
+        "name": "Project Management",
+        "slug": "project-management"
+    },
+    {
+        "id": 8,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Web Research",
+        "slug": "web-research"
+    },
+    {
+        "id": 9,
+        "category_id": 3,
+        "category": "Customer Service",
+        "name": "Personal\/Virtual Assistance",
+        "slug": "personalvirtual-assistance"
+    },
+    {
+        "id": 10,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Transcription",
+        "slug": "transcription"
+    },
+    {
+        "id": 11,
+        "category_id": 2,
+        "category": "Admin Support",
+        "name": "Other - Admin Support",
+        "slug": "other-admin-support"
+    },
+    {
+        "id": 12,
+        "category_id": 3,
+        "category": "Customer Service",
+        "name": "Customer Service",
+        "slug": "customer-service"
+    },
+    {
+        "id": 13,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Technical Support",
+        "slug": "technical-support"
+    },
+    {
+        "id": 14,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "A\/B Testing",
+        "slug": "ab-testing"
+    },
+    {
+        "id": 15,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "Data Mining & Management",
+        "slug": "data-mining-management"
+    },
+    {
+        "id": 16,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "Machine Learning",
+        "slug": "machine-learning"
+    },
+    {
+        "id": 17,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "Other - Data Science & Analytics",
+        "slug": "other-data-science-analytics"
+    },
+    {
+        "id": 18,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "Data Extraction\/ETL",
+        "slug": "data-extractionetl"
+    },
+    {
+        "id": 19,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "Data Visualization",
+        "slug": "data-visualization"
+    },
+    {
+        "id": 20,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "Quantitative Analysis",
+        "slug": "quantitative-analysis"
+    },
+    {
+        "id": 21,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Animation",
+        "slug": "animation"
+    },
+    {
+        "id": 22,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Audio Production",
+        "slug": "audio-production"
+    },
+    {
+        "id": 23,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Graphics & Design",
+        "slug": "graphics-design"
+    },
+    {
+        "id": 24,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Photography",
+        "slug": "photography"
+    },
+    {
+        "id": 25,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Presentations",
+        "slug": "presentations"
+    },
+    {
+        "id": 26,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Voice Talent",
+        "slug": "voice-talent"
+    },
+    {
+        "id": 27,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Art & Illustration",
+        "slug": "art-illustration"
+    },
+    {
+        "id": 28,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Brand Identity & Strategy",
+        "slug": "brand-identity-strategy"
+    },
+    {
+        "id": 29,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Motion Graphics",
+        "slug": "motion-graphics"
+    },
+    {
+        "id": 30,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Physical Design",
+        "slug": "physical-design"
+    },
+    {
+        "id": 31,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Video Production",
+        "slug": "video-production"
+    },
+    {
+        "id": 32,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Engineering & Architecture",
+        "slug": "engineering-architecture"
+    },
+    {
+        "id": 33,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Chemical Engineering",
+        "slug": "chemical-engineering"
+    },
+    {
+        "id": 34,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Contract Manufacturing",
+        "slug": "contract-manufacturing"
+    },
+    {
+        "id": 35,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Interior Design",
+        "slug": "interior-design"
+    },
+    {
+        "id": 36,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Physical Sciences",
+        "slug": "physical-sciences"
+    },
+    {
+        "id": 37,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Other - Engineering",
+        "slug": "other-engineering"
+    },
+    {
+        "id": 38,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Architecture",
+        "slug": "architecture"
+    },
+    {
+        "id": 39,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Civil & Structural Engineering",
+        "slug": "civil-structural-engineering"
+    },
+    {
+        "id": 40,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Electrical Engineering",
+        "slug": "electrical-engineering"
+    },
+    {
+        "id": 41,
+        "category_id": 11,
+        "category": "Engineering",
+        "name": "Mechanical Engineering",
+        "slug": "mechanical-engineering"
+    },
+    {
+        "id": 42,
+        "category_id": 5,
+        "category": "Design & Creative",
+        "name": "Product Design",
+        "slug": "product-design"
+    },
+    {
+        "id": 43,
+        "category_id": 4,
+        "category": "Data Science & Analytics",
+        "name": "Database Administration",
+        "slug": "database-administration"
+    },
+    {
+        "id": 44,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Information Security",
+        "slug": "information-security"
+    },
+    {
+        "id": 45,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Other - IT & Networking",
+        "slug": "other-it-networking"
+    },
+    {
+        "id": 46,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "ERP\/CRM Software",
+        "slug": "erpcrm-software"
+    },
+    {
+        "id": 47,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Etwork & System Administration",
+        "slug": "etwork-system-administration"
+    },
+    {
+        "id": 48,
+        "category_id": 6,
+        "category": "Legal",
+        "name": "Contract Law",
+        "slug": "contract-law"
+    },
+    {
+        "id": 49,
+        "category_id": 6,
+        "category": "Legal",
+        "name": "Intellectual Property Law",
+        "slug": "intellectual-property-law"
+    },
+    {
+        "id": 50,
+        "category_id": 6,
+        "category": "Legal",
+        "name": "Other - Legal",
+        "slug": "other-legal"
+    },
+    {
+        "id": 51,
+        "category_id": 6,
+        "category": "Legal",
+        "name": "Corporate Law",
+        "slug": "corporate-law"
+    },
+    {
+        "id": 52,
+        "category_id": 6,
+        "category": "Legal",
+        "name": "Paralegal Services",
+        "slug": "paralegal-services"
+    },
+    {
+        "id": 53,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "Display Advertising",
+        "slug": "display-advertising"
+    },
+    {
+        "id": 54,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "Lead Generation",
+        "slug": "lead-generation"
+    },
+    {
+        "id": 55,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "Marketing Strategy",
+        "slug": "marketing-strategy"
+    },
+    {
+        "id": 56,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "SEM - Search Engine Marketing",
+        "slug": "sem-search-engine-marketing"
+    },
+    {
+        "id": 57,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "SMM - Social Media Marketing",
+        "slug": "smm-social-media-marketing"
+    },
+    {
+        "id": 58,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "Other - Sales & Marketing",
+        "slug": "other-sales-marketing"
+    },
+    {
+        "id": 59,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "Email & Marketing Automation",
+        "slug": "email-marketing-automation"
+    },
+    {
+        "id": 60,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "Market & Customer Research",
+        "slug": "market-customer-research"
+    },
+    {
+        "id": 61,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "Public Relations",
+        "slug": "public-relations"
+    },
+    {
+        "id": 62,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "SEO - Search Engine Optimization",
+        "slug": "seo-search-engine-optimization"
+    },
+    {
+        "id": 63,
+        "category_id": 15,
+        "category": "Marketing",
+        "name": "Telemarketing & Telesales",
+        "slug": "telemarketing-telesales"
+    },
+    {
+        "id": 64,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "General Translation",
+        "slug": "general-translation"
+    },
+    {
+        "id": 65,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Medical Translation",
+        "slug": "medical-translation"
+    },
+    {
+        "id": 66,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Legal Translation",
+        "slug": "legal-translation"
+    },
+    {
+        "id": 67,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Technical Translation",
+        "slug": "technical-translation"
+    },
+    {
+        "id": 68,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Desktop Software Development",
+        "slug": "desktop-software-development"
+    },
+    {
+        "id": 69,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Game Development",
+        "slug": "game-development"
+    },
+    {
+        "id": 70,
+        "category_id": 10,
+        "category": "Management",
+        "name": "Product Management",
+        "slug": "product-management"
+    },
+    {
+        "id": 71,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Scripts & Utilities",
+        "slug": "scripts-utilities"
+    },
+    {
+        "id": 72,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Web Development",
+        "slug": "web-development"
+    },
+    {
+        "id": 73,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Ecommerce Development",
+        "slug": "ecommerce-development"
+    },
+    {
+        "id": 74,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Mobile Development",
+        "slug": "mobile-development"
+    },
+    {
+        "id": 75,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "QA & Testing",
+        "slug": "qa-testing"
+    },
+    {
+        "id": 76,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "QA & Testing",
+        "slug": "qa-testing"
+    },
+    {
+        "id": 77,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Web & Mobile Design",
+        "slug": "web-mobile-design"
+    },
+    {
+        "id": 78,
+        "category_id": 7,
+        "category": "Digital \/ IT",
+        "name": "Other - Software Development",
+        "slug": "other-software-development"
+    },
+    {
+        "id": 79,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Content & Copywriting",
+        "slug": "content-copywriting"
+    },
+    {
+        "id": 80,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Editing & Proofreading",
+        "slug": "editing-proofreading"
+    },
+    {
+        "id": 81,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Resumes & Cover Letters",
+        "slug": "resumes-cover-letters"
+    },
+    {
+        "id": 82,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Other - Writing",
+        "slug": "other-writing"
+    },
+    {
+        "id": 83,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Creative Writing",
+        "slug": "creative-writing"
+    },
+    {
+        "id": 84,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Grant Writing",
+        "slug": "grant-writing"
+    },
+    {
+        "id": 85,
+        "category_id": 16,
+        "category": "Content & Copywriting",
+        "name": "Technical Writing",
+        "slug": "technical-writing"
+    }
+]

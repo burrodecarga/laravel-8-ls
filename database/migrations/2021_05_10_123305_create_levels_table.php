@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSkillsTable extends Migration
+class CreateLevelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateSkillsTable extends Migration
      */
     public function up()
     {
-        Schema::create('skills', function (Blueprint $table) {
+        Schema::create('levels', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('level_id')->nullable();
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->string('category')->nullable();
             $table->string('name');
-            $table->string('slug');
             $table->timestamps();
-            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
         });
     }
 
@@ -32,6 +27,6 @@ class CreateSkillsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('skills');
+        Schema::dropIfExists('levels');
     }
 }

@@ -11,8 +11,15 @@ class Skill extends Model
 
     protected $fillable = [
         'category',
+        'category_id',
         'name',
-        'tag',
-        'level',
+        'slug',
+        'level_id',
     ];
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = ltrim(ucfirst($value));
+    }
+
 }

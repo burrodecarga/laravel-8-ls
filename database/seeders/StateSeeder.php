@@ -68,12 +68,14 @@ class StateSeeder extends Seeder
          $category->save();
         }
 
-        $json =File::get("database/data/skills.json");
+        $json =File::get("database/data/data.json");
         $data = json_decode($json);
         foreach ($data as $obj) {
          $skill = new Skill();
          $skill->name = $obj->name;
          $skill->slug = Str::slug($obj->name);
+         $skill->category = $obj->category;
+         $skill->category_id = $obj->category_id;
          //var_dump(($obj->name));
          $skill->save();
         }

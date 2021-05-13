@@ -66,7 +66,7 @@
                         <option value="Less than 30 hrs/week">Less than 30 hrs/week</option>
                         <option value="As needed - open to offers">As needed - open to offers</option>
                     </select>
-                    <x-jet-input-error for="avalability" class="mt-2" />
+                    <x-jet-input-error for="'availability" class="mt-2" />
                 </div>
 
                 <div class="col-span-3 sm:col-span-1 flex-1 ml-2">

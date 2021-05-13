@@ -45,3 +45,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/legal',ShowLegal::class)-
 Route::middleware(['auth:sanctum', 'verified'])->get('/user-profile',UserProfile::class)->name('user-profile');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/experiences',UserExperience::class)->name('experiences');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/skills', function () {
+    return view('skills.index');
+})->name('skills.index');
+

@@ -4,7 +4,8 @@
     ['href'=>'/posts', 'name'=>'posts', 'text'=>'posts'  ],
     ['href'=>'/jobs', 'name'=>'jobs', 'text'=>'jobs'  ],
     ['href'=>'/roles', 'name'=>'roles.index', 'text'=>'roles'  ],
-    ['href'=>'/legal', 'name'=>'legal.index', 'text'=>'legal'  ]
+    ['href'=>'/legal', 'name'=>'legal.index', 'text'=>'legal'  ],
+    ['href'=>'/skills', 'name'=>'skills.index', 'text'=>'skills'  ]
 
 ])
 
