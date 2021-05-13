@@ -19,8 +19,8 @@ class CreateExperiencesTable extends Migration
             $table->string('company', 150);
             $table->string('position', 150);
             $table->longText('description');
-            $table->dateTime('date_begin');
-            $table->dateTime('date_end');
+            $table->date('date_begin');
+            $table->date('date_end');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

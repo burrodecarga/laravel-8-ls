@@ -3,10 +3,14 @@
 namespace App\Http\Livewire;
 
 use Illuminate\Support\Carbon;
+use Illuminate\Validation\Rule;
 use Livewire\Component;
 
 class UserProfile extends Component
 {
+
+
+
     public $address = '';
     public $phone   = '';
     public $mobile  = '';
@@ -14,6 +18,7 @@ class UserProfile extends Component
     public $about = '';
     public $availability = '';
     public $birthdate;
+
 
     public $title = '';
     public $description = '';
@@ -53,8 +58,7 @@ class UserProfile extends Component
             'about' =>'string',
               ];
         $values = $this->validate($rules);
-
-
+      
         $fecha = $values['birthdate'];
 
         //$this->birthdate = $this->fecha($fecha);

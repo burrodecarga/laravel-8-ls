@@ -1,10 +1,8 @@
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('Laboral Profile and Personal Information') }}
+        {{ __('Personal Information') }}
     </h2>
 </x-slot>
-
-
 
 <div>
     <div class="max-w-7xl mx-auto py-2 sm:px-6 lg:px-8">
@@ -13,7 +11,7 @@
         <div class="grid  grid-cols-1 md:grid-cols-7 bg-gray-300 p-3 rounded">
             <form class="grid col-start-2 col-span-4 gap-2 p-4 bg-white rounded" wire:submit.prevent="personal">
                 <div class="col-span-3 ml-2">
-                    <x-jet-label for="title" value="{{ __('My professional skills') }}" />
+                    <x-jet-label for="title" value="{{ __('My professional skills')}}" />
                     <x-jet-input id="title" type="text" class="mt-1 block w-full" wire:model.defer="title"
                         autocomplete="title"
                         placeholder=" Enter a description of your professional skills (e.g. Web Designer)" />
@@ -62,7 +60,7 @@
                 <div class="col-span-3 sm:col-span-1 flex-1 ml-2">
                     <x-jet-label for="cost" value="{{ __('availability') }}" />
 
-                    <select class="my-2 rounded" wire:model="availability">
+                    <select class="my-2 rounded" wire:model.defer="availability">
                         <option value="availability">availability</option>
                         <option value="More than 30 hrs/week">More than 30 hrs/week</option>
                         <option value="Less than 30 hrs/week">Less than 30 hrs/week</option>

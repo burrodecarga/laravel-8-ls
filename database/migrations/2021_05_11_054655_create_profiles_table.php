@@ -19,7 +19,7 @@ class CreateProfilesTable extends Migration
             $table->string('title')->nullable();
             $table->string('address')->nullable();
             $table->float('cost',10,2)->nullable();
-            $table->enum('availability',['More than 30 hrs/week','Less than 30 hrs/week','As needed - open to offers']);
+            $table->string('availability')->nullable();
             $table->longText('about')->nullable();
             $table->string('phone')->nullable();
             $table->string('mobile')->nullable();

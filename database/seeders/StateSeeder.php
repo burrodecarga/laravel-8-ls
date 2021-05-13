@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Salary;
 use App\Models\State;
 use App\Models\Schedule;
+use App\Models\Skill;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
@@ -66,6 +67,18 @@ class StateSeeder extends Seeder
          //var_dump(($obj->name));
          $category->save();
         }
+
+        $json =File::get("database/data/skills.json");
+        $data = json_decode($json);
+        foreach ($data as $obj) {
+         $skill = new Skill();
+         $skill->name = $obj->name;
+         $skill->slug = Str::slug($obj->name);
+         //var_dump(($obj->name));
+         $skill->save();
+        }
+
+
 
     }
 

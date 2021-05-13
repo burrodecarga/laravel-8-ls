@@ -11,9 +11,17 @@ class Experience extends Model
 
     protected $fillable = [
        'user_id',
-        'title',
+       'company',
+       'position',
        'description',
         'date_begin',
         'date_end',
     ];
+
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
