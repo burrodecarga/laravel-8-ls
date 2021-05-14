@@ -10,6 +10,7 @@ use App\Http\Livewire\ListOfUsers;
 use App\Http\Livewire\ShowJob;
 use App\Http\Livewire\ShowLegal;
 use App\Http\Livewire\SkillList;
+use App\Http\Livewire\UserCv;
 use App\Http\Livewire\UserExperience;
 use App\Http\Livewire\UserProfile;
 
@@ -24,6 +25,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/laboral', function () {
     return view('laboral.show');
 })->name('laboral');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/resume', UserCv::class)->name('resume');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/users',ListOfUsers::class)->name('users');
@@ -52,3 +55,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/skills', function () {
 })->name('skills.index');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/user-skills',SkillList::class)->name('user-skills');
+
+

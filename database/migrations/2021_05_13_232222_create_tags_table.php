@@ -17,7 +17,9 @@ class CreateTagsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('skill_id');
+            $table->string('category');
             $table->string('skill');
+            $table->string('tag');
             $table->string('slug');
             $table->integer('level');
             $table->timestamps();

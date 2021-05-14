@@ -93,12 +93,17 @@ class User extends Authenticatable
 
     public function skills()
     {
-        return $this->belongsToMany(Skill::class);
+        return $this->belongsToMany(Skill::class)->withTimestamps();
     }
 
     public function experiences()
     {
         return $this->hasMany(Experience::class);
+    }
+
+    public function tags()
+    {
+        return $this->hasMany(Tag::class);
     }
 
 
