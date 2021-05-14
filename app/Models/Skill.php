@@ -22,4 +22,10 @@ class Skill extends Model
         $this->attributes['name'] = ltrim(ucfirst($value));
     }
 
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
 }

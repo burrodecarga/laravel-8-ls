@@ -22,6 +22,7 @@ class CreateSkillsTable extends Migration
             $table->string('slug');
             $table->timestamps();
             $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 

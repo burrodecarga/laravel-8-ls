@@ -9,6 +9,7 @@ use App\Http\Livewire\ListOfRoles;
 use App\Http\Livewire\ListOfUsers;
 use App\Http\Livewire\ShowJob;
 use App\Http\Livewire\ShowLegal;
+use App\Http\Livewire\SkillList;
 use App\Http\Livewire\UserExperience;
 use App\Http\Livewire\UserProfile;
 
@@ -50,3 +51,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/skills', function () {
     return view('skills.index');
 })->name('skills.index');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/user-skills',SkillList::class)->name('user-skills');

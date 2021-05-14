@@ -49,6 +49,5 @@ class ShowRole extends Component
         $this->emit('alert', 'Role offer was updated successfully');
         $this->reset();}
 
-
     }
 }

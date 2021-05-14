@@ -18,6 +18,7 @@ class Skills extends Component
     public $create ='';
     public $update ='hidden';
 
+
     protected  $rules = ['category' => 'required','skill' => 'required|max:100','skillId'=>'numeric'];
 
 
@@ -25,11 +26,11 @@ class Skills extends Component
     {
         $categories = Category::orderBy('name')->get();
         $skills = Skill::orderBy('created_at','desc')->paginate(100);
-        $res = Skill::all('id','category_id','category','name','slug')->toJson();
+        //$res = Skill::all('id','category_id','category','name','slug')->toJson();
        //dump($res);
         return view('livewire.skills',[
             'skills' =>$skills,
-            'categories' =>$categories
+            'categories' =>$categories,
         ]);
     }
 

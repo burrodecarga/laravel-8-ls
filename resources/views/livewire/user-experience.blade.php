@@ -119,7 +119,7 @@
                 <div class="flex flex-col">
                     <a href="{{route('user-profile')}}"
                         class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">Personal Information</a>
-                    <a href="#"
+                    <a href="{{route('user-skills')}}"
                         class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">skill</a>
                     <a href="#"
                         class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">skill</a>
