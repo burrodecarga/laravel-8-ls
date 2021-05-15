@@ -3,11 +3,11 @@
 }
 
 .form-table{
-    @apply w-full flex flex-row flex-no-wrap rounded-lg overflow-hidden sm:shadow-lg my-5
+    @apply w-full flex flex-row flex-nowrap rounded-lg overflow-hidden sm:shadow-lg my-5
 }
 
 .form-table-tr{
-    @apply flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0
+    @apply flex flex-col flex-nowrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0
 }
 
 .form-table-body{
@@ -15,7 +15,7 @@
 }
 
 .form-tbody-tr{
-    @apply flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0
+    @apply flex flex-col flex-nowrap sm:table-row mb-2 sm:mb-0
 }
 
 

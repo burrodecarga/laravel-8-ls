@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Category;
+use App\Models\Focal;
 use App\Models\Salary;
 use App\Models\State;
 use App\Models\Schedule;
@@ -79,6 +80,32 @@ class StateSeeder extends Seeder
          //var_dump(($obj->name));
          $skill->save();
         }
+
+        $json =File::get("database/data/focal.json");
+        $data = json_decode($json);
+
+        foreach ($data as $obj) {
+
+          $focal = new Focal();
+          $focal->title = $obj->title;
+          $focal->slug = Str::slug($obj->title);
+          $focal->description = $obj->description;
+          $focal->link = $obj->link;
+          $focal->pdf = $obj->pdf;
+          $focal->video = '$obj->video';
+          $focal->save();
+        }
+
+         $json =File::get("database/data/iframe.json");
+         $data = json_decode($json);
+
+          foreach ($data as $obj) {
+
+                $focal = Focal::find($obj->id);
+                $focal->video = $obj->video;
+                $focal->save();
+          }
+
 
 
 

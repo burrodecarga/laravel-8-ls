@@ -106,5 +106,10 @@ class User extends Authenticatable
         return $this->hasMany(Tag::class);
     }
 
+    public function files()
+    {
+        return $this->hasMany(File::class);
+    }
+
 
 }
