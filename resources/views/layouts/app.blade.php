@@ -9,12 +9,17 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"> --}}
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link href="{{asset('css/fontawesome-free-5.15.3-web/css/all.css')}} " rel="stylesheet">
-    <link href="{{asset('css/Apply.module.css')}} " rel="stylesheet">
+    <link href="{{asset('css/labor-staffers.css')}} " rel="stylesheet">
 
 
     @livewireStyles
@@ -29,8 +34,9 @@
     <x-jet-banner />
 
     <div class="min-h-screen bg-gray-100">
-        @livewire('navigation-menu')
-
+         <x-labor-staffers-frame>
+             <x-labor-staffers-media />
+        </x-labor-staffers-frame>
         <!-- Page Heading -->
         @if (isset($header))
         <header class="bg-white shadow">
@@ -40,9 +46,11 @@
         @endif
 
         <!-- Page Content -->
+
         <main>
             {{ $slot }}
         </main>
+        <x-labor-staffers-footer/>
     </div>
 
     @stack('modals')

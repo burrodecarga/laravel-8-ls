@@ -18,11 +18,11 @@ use App\Http\Livewire\UserFiles;
 use App\Http\Livewire\UserProfile;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->layout('layouts.bpp');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard')->layout('layouts.bpp');
 })->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/laboral', function () {
@@ -35,7 +35,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/user-files', UserFiles::c
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/focal-points',FocalPoits::class)->name('focal-points');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/focal-points/{slug}',FocalPoitsShow::class)->name('focal-points-show');
+Route::middleware(['auth:sanctum', 'verified'])->get('/focal-points/{focal}',FocalPoitsShow::class)->name('focal-points-show');
 
 
 

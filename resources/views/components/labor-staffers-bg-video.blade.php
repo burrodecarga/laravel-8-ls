@@ -1,0 +1,32 @@
+<div>
+    <!-- Be present above all else. - Naval Ravikant -->
+</div><video
+muted
+autoPlay
+loop
+playsInline
+class="bg-video"
+id="myvideo"
+width="100%"
+height="auto"
+poster="pre-video.jpg"
+>
+<source
+  src="{{asset("assets/media/home/video-bg.mp4")}}"
+  type="video/mp4"
+  autoPlay
+  loop
+/>
+<source
+  src="{{asset("assets/media/home/video-bg-move.mov")}}"
+  type="video/mp4"
+  autoPlay
+  loop
+/>
+<source
+  src="{{asset("assets/media/home/video-bg-webm.webm")}}"
+  type="video/mp4"
+  autoPlay
+  loop
+/>
+</video>

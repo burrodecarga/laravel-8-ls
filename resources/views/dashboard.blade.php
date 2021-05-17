@@ -1,4 +1,7 @@
 <x-app-layout>
+<x-labor-staffers-media>
+ xx
+</x-labor-staffers-media>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}

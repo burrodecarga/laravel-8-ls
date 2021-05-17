@@ -8,11 +8,12 @@ use Livewire\Component;
 class FocalPoitsShow extends Component
 {
     public $slug;
+    public Focal $focal;
 
     public function render()
     {
-        $point = Focal::where('slug',$this->slug)->get();
-        dd($point);
-        return view('livewire.focal-poits-show',['point'=>$point]);
+
+         $src =$this->focal->video;
+        return view('livewire.focal-poits-show',['point'=>$this->focal,'src'=>$src]);
     }
 }

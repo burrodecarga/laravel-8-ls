@@ -96,7 +96,7 @@ class StateSeeder extends Seeder
           $focal->save();
         }
 
-         $json =File::get("database/data/iframe.json");
+         $json =File::get("database/data/base.json");
          $data = json_decode($json);
 
           foreach ($data as $obj) {
