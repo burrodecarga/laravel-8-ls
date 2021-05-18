@@ -307,6 +307,19 @@ ul li a:hover {
     z-index: 999999;
   }
 
+  .verTab{
+   display: grid;
+  }
+  .noVerTab{
+display: none ;
+  }
+
+
+
+  .text18rem{
+      font-size: 1.8rem;
+  }
+
   @keyframes down {
     0% {
         top: 95%;
@@ -363,7 +376,7 @@ ul li a:hover {
     justify-content: center;
     align-items: center;
   }
- 
+
 /*end class header*/
 
 /* footer */

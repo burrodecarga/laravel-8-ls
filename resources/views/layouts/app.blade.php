@@ -22,10 +22,15 @@
     <link href="{{asset('css/labor-staffers.css')}} " rel="stylesheet">
 
 
+
+
+
+
     @livewireStyles
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+  <script src="{{ asset('labor-js/script.js') }}" defer></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </head>
@@ -37,6 +42,8 @@
          <x-labor-staffers-frame>
              <x-labor-staffers-media />
         </x-labor-staffers-frame>
+        <x-labor-staffers-s1 />
+        <x-labor-staffers-taps />
         <!-- Page Heading -->
         @if (isset($header))
         <header class="bg-white shadow">
@@ -46,6 +53,7 @@
         @endif
 
         <!-- Page Content -->
+
 
         <main>
             {{ $slot }}

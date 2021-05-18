@@ -1,4 +1,4 @@
-<div class="invisible md:visible flex bg-transparent px-3 pt-3">
+<div class="invisible md:visible md:mb-3 flex bg-transparent px-3 pt-3">
     {{-- left --}}
     <div class="flex flex-1 items-center bg-transparent text-white text-lg font-normal">
         <p>Welcome to your future</p>

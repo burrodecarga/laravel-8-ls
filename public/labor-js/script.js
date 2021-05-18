@@ -2,13 +2,9 @@
 let btnRecruit = document.querySelector('.btns');
 let btnRecruit2 = document.querySelector('.btns-2');
 let btnRecruit3 = document.querySelector('.btns-3');
-let tabOne = document.querySelector('.tabOne');
-let tabTwo = document.querySelector('.tabTwo');
-let tabThree = document.querySelector('.tabThree');
 let wholeTabOne = document.querySelector('.whole-tabOne')
 let wholeTabTwo = document.querySelector('.whole-tabTwo')
 let videobg =document.querySelector('.bg-video')
-
 var UID = {
 	_current: 0,
 	getNew: function(){
@@ -24,17 +20,17 @@ HTMLElement.prototype.pseudoStyle = function(element,prop,value){
 	var _sheet = document.getElementById(_sheetId) || document.createElement('style');
 	_sheet.id = _sheetId;
 	var className = "pseudoStyle" + UID.getNew();
-	
-	_this.className +=  " "+className; 
-	
+
+	_this.className +=  " "+className;
+
 	_sheet.innerHTML += " ."+className+":"+element+"{"+prop+":"+value+"}";
 	_head.appendChild(_sheet);
 	return this;
 };
 
 
-    
-btnRecruit2.addEventListener('click', () => {
+
+/* btnRecruit2.addEventListener('click', () => {
 
 	if (true) {
 		btnRecruit2.pseudoStyle('after', 'border-style', 'solid')
@@ -92,12 +88,12 @@ btnRecruit.addEventListener('click', () => {
 
    }
 })
-
+ */
 
 
 // slider
 
-var slideIndex = 1;
+/* var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -112,18 +108,18 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
+  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
+ */
 
 // ios detected and plugin vd bg
 
@@ -148,6 +144,47 @@ if (iOS() === true) {
     await video.play();
   } catch (err) {
     video.controls = false;
-  }}); 
+  }});
 }
 
+function dropdown(id)
+{
+    let tabOne = document.querySelector('.tabOne');
+    let tabTwo = document.querySelector('.tabTwo');
+    let tabThree = document.querySelector('.tabThree');
+
+
+
+     if(tabOne.classList.contains("verTab")) tabOne.classList.remove("verTab")
+     if(tabOne.classList.contains("noVerTab")) tabOne.classList.remove('noVerTab')
+
+     if(tabTwo.classList.contains("verTab")) tabTwo.classList.remove("verTab")
+     if(tabTwo.classList.contains("noVerTab")) tabTwo.classList.remove('noVerTab')
+
+     if(tabThree.classList.contains("verTab")) tabThree.classList.remove("verTab")
+     if(tabThree.classList.contains("noVerTab")) tabThree.classList.remove('noVerTab')
+
+     if(id==1)
+      {
+         tabOne.classList.add('verTab')
+         tabTwo.classList.add('noVerTab')
+         tabThree.classList.add('noVerTab')
+      }
+      if(id==2)
+      {
+         tabTwo.classList.add('verTab')
+         tabOne.classList.add('noVerTab')
+         tabThree.classList.add('noVerTab')
+
+      }
+      if(id==3)
+      {
+         tabThree.classList.add('verTab')
+         tabTwo.classList.add('noVerTab')
+         tabOne.classList.add('noVerTab')
+      }
+
+
+
+
+}

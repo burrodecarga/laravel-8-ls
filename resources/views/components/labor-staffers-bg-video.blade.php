@@ -9,7 +9,7 @@ class="bg-video"
 id="myvideo"
 width="100%"
 height="auto"
-poster="pre-video.jpg"
+poster="{{asset("assets/media/home/pre-video.jpg")}}"
 >
 <source
   src="{{asset("assets/media/home/video-bg.mp4")}}"
