@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class labor-staffers-taps extends Component
+class laborStaffersTaps extends Component
 {
     /**
      * Create a new component instance.

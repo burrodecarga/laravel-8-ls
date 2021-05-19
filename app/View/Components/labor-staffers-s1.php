@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class labor-staffers-s1 extends Component
+class laborStaffersS1 extends Component
 {
     /**
      * Create a new component instance.

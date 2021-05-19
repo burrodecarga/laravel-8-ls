@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class labor-staffers-frame extends Component
+class laborStaffersFrame extends Component
 {
     /**
      * Create a new component instance.

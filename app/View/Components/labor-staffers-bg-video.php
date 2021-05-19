@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class labor-staffers-bg-video extends Component
+class laborStaffersBgVideo extends Component
 {
     /**
      * Create a new component instance.
