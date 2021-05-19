@@ -1,5 +1,6 @@
 @php($navLink = [
-    ['href'=>'/dashboard', 'name'=>'dashboard', 'text'=>'Dashboard'  ],
+    ['href'=>'/dashboard', 'name'=>'dashboard', 'text'=>'Dashboard' ],
+    ['href'=>'/about', 'name'=>'about', 'text'=>'About Us'  ],
     ['href'=>'/users', 'name'=>'users', 'text'=>'Users'  ],
     ['href'=>'/posts', 'name'=>'posts', 'text'=>'posts'  ],
     ['href'=>'/jobs', 'name'=>'jobs', 'text'=>'jobs'  ],
@@ -15,8 +16,8 @@
         </div>
         <div class="links">
             <ul>
-                <li><a class="text-white" href="./index.html">Home</a></li>
-                <li><a class="text-white" href="./about-us/">About us</a></li>
+                <li><a class="text-white" href="#">Home</a></li>
+                <li><a class="text-white" href="#">About us</a></li>
                 <li><a class="text-white" href="./jobs/">Jobs</a></li>
                 <li><a class="text-white" href="./candidates/">Candidates</a></li>
                 <li><a class="text-white" href="./employers/">Employers</a></li>
@@ -37,7 +38,7 @@
       <div>
       <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="./about-us/">About us</a></li>
+                <li><a href="/about">About us</a></li>
                 <li><a href="./jobs/">Jobs</a></li>
                 <li><a href="./candidates/">Candidates</a></li>
                 <li><a href="./employers/">Employers</a></li>

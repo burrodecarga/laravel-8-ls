@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class BppLayout extends Component
 {
+    public $clase;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($clase="")
     {
-        //
+       $this->clase = $clase;
+
     }
 
     /**
@@ -23,6 +25,7 @@ class BppLayout extends Component
      */
     public function render()
     {
-        return view('components.bpp-layout');
+
+        return view('layouts.bpp');
     }
 }
