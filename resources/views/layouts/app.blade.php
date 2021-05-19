@@ -61,6 +61,7 @@
             {{ $slot }}
         </main>
           <x-labor-staffers-s3 />
+          <x-labor-staffers-s4 />
           <x-labor-staffers-footer/>
     </div>
 

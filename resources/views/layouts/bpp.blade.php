@@ -38,13 +38,14 @@
 <body class="font-sans antialiased">
     <x-jet-banner />
     <div class="min-h-screen bg-gray-100">
-            <div class="{{$clase}}">
+            <div class="{{$pageClass}}">
             <x-labor-staffers-social-media/>
             <div class="p-5">
               <x-labor-staffers-menu />
             </div>
+            <h3 class="{{$classTitulo}}">{{$pageTitulo}}</h3>
+            <h3 class="{{$classSubTitulo}}">{{$pageSubTitulo}}</h3>
           </div>
-
         <main>
             {{ $slot }}
         </main>

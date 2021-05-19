@@ -4,18 +4,16 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class BppLayout extends Component
+class laborStaffersS4 extends Component
 {
-    public $pageClass;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($pageClass="")
+    public function __construct()
     {
-       $this->pageClass = $pageClass;
-
+        //
     }
 
     /**
@@ -25,7 +23,6 @@ class BppLayout extends Component
      */
     public function render()
     {
-
-        return view('layouts.bpp');
+        return view('components.labor-staffers-s4');
     }
 }
