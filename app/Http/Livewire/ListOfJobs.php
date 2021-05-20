@@ -53,7 +53,13 @@ class ListOfJobs extends Component
                 'schedules'=>$schedules,
                 'posts'=>$posts
             ]
-        );
+        )->layout('layouts.bpp',[
+            'pageClass' =>'job-header',
+            'classTitulo' =>'',
+            'classSubTitulo' =>'',
+            'pageTitulo' =>'Prueba',
+            'pageSubTitulo' =>'subtitulo'
+        ]);
     }
 
     public function sorted($campo)

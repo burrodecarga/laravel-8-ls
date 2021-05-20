@@ -2,6 +2,7 @@
     ['href'=>'/dashboard', 'name'=>'home', 'text'=>'Home' ],
     ['href'=>'/', 'name'=>'home', 'text'=>'Home'  ],
     ['href'=>'/about', 'name'=>'about', 'text'=>'About Us'  ],
+    ['href'=>'/candidates', 'name'=>'candidates', 'text'=>'Candidates'  ],
     ['href'=>'/users', 'name'=>'users', 'text'=>'Users'  ],
     ['href'=>'/posts', 'name'=>'posts', 'text'=>'posts'  ],
     ['href'=>'/jobs', 'name'=>'jobs', 'text'=>'jobs'  ],
@@ -20,7 +21,7 @@
                 <li><a class="text-white" href="{{url('/dashboard')}}">Home</a></li>
                 <li><a class="text-white" href="{{ url('/about')}} ">About us</a></li>
                 <li><a class="text-white" href="./jobs/">Jobs</a></li>
-                <li><a class="text-white" href="./candidates/">Candidates</a></li>
+                <li><a class="text-white" href="{{url('/candidates')}}">Candidates</a></li>
                 <li><a class="text-white" href="./employers/">Employers</a></li>
                 <li><a class="text-white" href="./services/">Services</a></li>
                 <li><a class="text-white" href="./contact-us/">Contact us</a></li>

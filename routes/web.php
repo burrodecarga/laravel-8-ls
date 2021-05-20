@@ -25,6 +25,10 @@ Route::get('/about', function () {
     return view('about')->layout('layouts.bpp');
 });
 
+Route::get('/candidates', function () {
+    return view('candidates')->layout('layouts.bpp');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard')->layout('layouts.bpp');
 })->name('dashboard');

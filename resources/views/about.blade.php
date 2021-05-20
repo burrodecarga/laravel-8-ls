@@ -18,10 +18,10 @@
                     at some of the nation’s largest and most recognizable companies.
                 </p>
 
-                <button href="{{url('/services')}}"
-                    class="btnPage bg-blue-600 w-64 h-16 text-white text-sm font-bold uppercase hover:bg-orange-900  float-left my-5">our
+                <a href="{{url('/services')}}"
+                    class="btnPage bg-blue-600 py-6 w-60 text-center  text-white text-sm font-bold uppercase hover:bg-orange-900  float-left my-5">our
                     services
-                </button>
+                </a>
             </div>
         </section>
         <section class="m-auto p-5 max-w-6xl">
@@ -43,10 +43,10 @@
                         <li class="list-disc"><span class="text-gray-500 text-sm">1st, 2nd, and 3rd Shift</span></li>
                     </ul>
                 </div>
-                <div class="btnSide">
-                    <button href="{{url('/employers')}}"
-                        class="btnPage bg-blue-600 w-64 h-16 text-white text-sm font-bold uppercase hover:bg-orange-900  float-left my-5">request
-                        staff</button>
+                <div>
+                    <a href="{{url('/employers')}}"
+                        class="btnPage bg-blue-600 py-6 w-60 text-center text-white text-sm font-bold uppercase hover:bg-orange-900  float-left my-5 content-center">request
+                        staff</a>
                 </div>
             </div>
         </section>
@@ -59,9 +59,9 @@
                     hold a position in the
                     same way. We believe that the right employee has to fit within a professional and personal
                     profile.</p>
-                <button href="{{url('/contact')}}"
-                    class="btnPage bg-blue-600 w-64 h-16 text-white text-sm font-bold uppercase hover:bg-orange-900  float-left my-5">contact
-                    us</button>
+                <a href="{{url('/contact')}}"
+                    class="btnPage bg-blue-600 py-6 w-60 text-center text-white text-sm font-bold uppercase hover:bg-orange-900  float-left my-5">contact
+                    us</a>
             </div>
         </section>
         <section class="m-auto p-5 max-w-6xl">
@@ -72,9 +72,9 @@
                     visitors can see more than 20 safety videos that indicate the best practices of operating
                     certain work equipment and taking precautions in multiple circumstances.</p>
 
-                <button href="{{route('focal-points')}}"
-                    class="btnPage bg-blue-600 w-64 h-16 text-white text-sm font-bold uppercase hover:bg-orange-900  float-left my-5">Focal
-                    Points</button>
+                <a href="{{route('focal-points')}}"
+                    class="btnPage bg-blue-600 py-6 w-60 text-center text-white text-sm font-bold uppercase hover:bg-orange-900  float-left my-5">Focal
+                    Points</a>
             </div>
         </section>
 
