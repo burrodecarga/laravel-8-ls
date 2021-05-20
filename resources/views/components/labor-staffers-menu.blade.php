@@ -5,6 +5,8 @@
     ['href'=>'/candidates', 'name'=>'candidates', 'text'=>'Candidates'  ],
     ['href'=>'/employers', 'name'=>'employers', 'text'=>'Employers'  ],
     ['href'=>'/services', 'name'=>'services', 'text'=>'Services'  ],
+    ['href'=>'/contact', 'name'=>'contact', 'text'=>'Contact Us'  ],
+
     ['href'=>'/users', 'name'=>'users', 'text'=>'Users'  ],
     ['href'=>'/posts', 'name'=>'posts', 'text'=>'posts'  ],
     ['href'=>'/jobs', 'name'=>'jobs', 'text'=>'jobs'  ],
@@ -26,8 +28,27 @@
                 <li><a class="text-white" href="{{url('/candidates')}}">Candidates</a></li>
                 <li><a class="text-white" href="{{url('/employers')}}">Employers</a></li>
                 <li><a class="text-white" href="{{url('/services')}}">Services</a></li>
-                <li><a class="text-white" href="./contact-us/">Contact us</a></li>
+                <li><a class="text-white" href="{{url('/contact')}}">Contact us</a></li>
+                @auth
+                <li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <a class="text-white" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
+                </li>
+                @else
+                <li><a class="text-white" href="{{route('login')}}">Login</a></li>
+                @if (Route::has('register'))
+                 <li><a class="text-white" href="{{route('register')}}">Register</a></li>
+                @endif
+            @endauth
             </ul>
+
         </div>
       </div>
       </nav>

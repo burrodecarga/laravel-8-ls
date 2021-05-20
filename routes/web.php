@@ -4,6 +4,7 @@ use App\Http\Livewire\ListOfJobs;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Http\Controllers\RoleController;
+use App\Http\Livewire\ContactUs;
 use App\Http\Livewire\FocalPoits;
 use App\Http\Livewire\FocalPoitsShow;
 use App\Http\Livewire\ListOfPosts;
@@ -36,6 +37,10 @@ Route::get('/employers', function () {
 Route::get('/services', function () {
     return view('services')->layout('layouts.bpp');
 });
+
+Route::get('/contact', ContactUs::class);
+
+
 
 
 

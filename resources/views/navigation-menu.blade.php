@@ -30,7 +30,6 @@
                         {{ __($link['text']) }}
                       </x-nav-link>
                     @endforeach
-
                 </div>
             </div>
 

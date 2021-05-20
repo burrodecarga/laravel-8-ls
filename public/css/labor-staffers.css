@@ -816,6 +816,10 @@ display: none ;
     }
 }
 
+.caja40{
+    width:40%;
+}
+
 .caja70{
     width:70%;
 }
@@ -987,3 +991,23 @@ display: none ;
   }
 
 
+  .s8 {
+    background: url(/assets/media/contact/contact-us.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .s8::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
