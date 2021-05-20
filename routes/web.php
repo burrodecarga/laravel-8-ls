@@ -33,6 +33,11 @@ Route::get('/employers', function () {
     return view('employers')->layout('layouts.bpp');
 });
 
+Route::get('/services', function () {
+    return view('services')->layout('layouts.bpp');
+});
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard')->layout('layouts.bpp');

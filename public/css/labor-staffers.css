@@ -1,4 +1,6 @@
-
+body,main{
+    background: #fff;
+}
 h1 {
     font-size: 3rem;
     color: #E87D1B;
@@ -962,4 +964,26 @@ display: none ;
     opacity: .45;
     z-index: -1;
   }
+
+  .s7 {
+    background: url(/assets/media/services/services.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .s7::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+
 

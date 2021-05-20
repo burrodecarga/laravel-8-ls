@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Response extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['message_id','asunto','body'];
+
+
+    public function message()
+    {
+        return $this->belongsTo(Message::class);
+    }
 }

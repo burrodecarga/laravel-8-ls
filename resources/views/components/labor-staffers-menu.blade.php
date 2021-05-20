@@ -3,6 +3,8 @@
     ['href'=>'/', 'name'=>'home', 'text'=>'Home'  ],
     ['href'=>'/about', 'name'=>'about', 'text'=>'About Us'  ],
     ['href'=>'/candidates', 'name'=>'candidates', 'text'=>'Candidates'  ],
+    ['href'=>'/employers', 'name'=>'employers', 'text'=>'Employers'  ],
+    ['href'=>'/services', 'name'=>'services', 'text'=>'Services'  ],
     ['href'=>'/users', 'name'=>'users', 'text'=>'Users'  ],
     ['href'=>'/posts', 'name'=>'posts', 'text'=>'posts'  ],
     ['href'=>'/jobs', 'name'=>'jobs', 'text'=>'jobs'  ],
@@ -23,7 +25,7 @@
                 <li><a class="text-white" href="./jobs/">Jobs</a></li>
                 <li><a class="text-white" href="{{url('/candidates')}}">Candidates</a></li>
                 <li><a class="text-white" href="{{url('/employers')}}">Employers</a></li>
-                <li><a class="text-white" href="./services/">Services</a></li>
+                <li><a class="text-white" href="{{url('/services')}}">Services</a></li>
                 <li><a class="text-white" href="./contact-us/">Contact us</a></li>
             </ul>
         </div>
