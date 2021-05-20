@@ -29,6 +29,11 @@ Route::get('/candidates', function () {
     return view('candidates')->layout('layouts.bpp');
 });
 
+Route::get('/employers', function () {
+    return view('employers')->layout('layouts.bpp');
+});
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard')->layout('layouts.bpp');
 })->name('dashboard');

@@ -22,7 +22,7 @@
                 <li><a class="text-white" href="{{ url('/about')}} ">About us</a></li>
                 <li><a class="text-white" href="./jobs/">Jobs</a></li>
                 <li><a class="text-white" href="{{url('/candidates')}}">Candidates</a></li>
-                <li><a class="text-white" href="./employers/">Employers</a></li>
+                <li><a class="text-white" href="{{url('/employers')}}">Employers</a></li>
                 <li><a class="text-white" href="./services/">Services</a></li>
                 <li><a class="text-white" href="./contact-us/">Contact us</a></li>
             </ul>

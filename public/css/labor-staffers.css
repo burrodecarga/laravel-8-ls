@@ -814,6 +814,22 @@ display: none ;
     }
 }
 
+.caja70{
+    width:70%;
+}
+
+.caja75{
+    width: 75%;
+}
+
+.caja80{
+    width: 80%;
+}
+
+.caja90{
+    width: 90%;
+}
+
 .about {
     background: url(/assets/media/about-us-bg.jpg);
     background-repeat: no-repeat;
@@ -924,3 +940,26 @@ display: none ;
     opacity: .45;
     z-index: -1;
   }
+
+
+  .s6 {
+    background: url(/assets/media/employers/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .s6::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+
