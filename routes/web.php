@@ -26,11 +26,11 @@ Route::get('/about', function () {
     return view('about')->layout('layouts.bpp');
 });
 
-Route::get('/candidates', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/candidates', function () {
     return view('candidates')->layout('layouts.bpp');
 });
 
-Route::get('/employers', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/employers', function () {
     return view('employers')->layout('layouts.bpp');
 });
 
@@ -38,9 +38,23 @@ Route::get('/services', function () {
     return view('services')->layout('layouts.bpp');
 });
 
-Route::get('/contact', ContactUs::class);
+Route::middleware(['auth:sanctum', 'verified'])->get('/contact', ContactUs::class);
 
+Route::get('/skype-interview', function () {
+    return view('skype-interview')->layout('layouts.cpp');
+});
 
+Route::get('/work-from-home', function () {
+    return view('work-from-home')->layout('layouts.cpp');
+});
+
+Route::get('/keep-your-job', function () {
+    return view('keep-your-job')->layout('layouts.cpp');
+});
+
+Route::get('/job-interview', function () {
+    return view('job-interview')->layout('layouts.cpp');
+});
 
 
 
