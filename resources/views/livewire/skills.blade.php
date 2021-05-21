@@ -1,5 +1,6 @@
 <div>
 <div class="bg-gray-300 p-3 rounded">
+    <h2 class="text-center text-orange-900 text-2xl sm:text-3xl font-bold">Add General Skill</h2>
     <form class="flex flex-row flex-wrap p-4 bg-white rounded">
        <input type="hidden" wire:model="skillId">
 
@@ -36,8 +37,6 @@
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-
-
             <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
               <tr>

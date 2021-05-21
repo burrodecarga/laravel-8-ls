@@ -30,7 +30,7 @@ class UserProfile extends Component
     {
         $profile = auth()->user()->profile;
         if ($profile) $this->asignaProfile($profile);
-        return view('livewire.user-profile');
+        return view('livewire.user-profile')->layout('layouts.cpp');
     }
 
     public function asignaProfile($profile)
@@ -58,7 +58,7 @@ class UserProfile extends Component
             'about' =>'string',
               ];
         $values = $this->validate($rules);
-      
+
         $fecha = $values['birthdate'];
 
         //$this->birthdate = $this->fecha($fecha);

@@ -30,6 +30,8 @@
                 <li><a class="text-white" href="{{url('/services')}}">Services</a></li>
                 <li><a class="text-white" href="{{url('/contact')}}">Contact us</a></li>
                 @auth
+                <li><a class="text-white" href="{{route('profile.show')}}">perfil</a></li>
+                <li><a class="text-white" href="{{route('user-profile')}}">profile</a></li>
                 <li>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -48,7 +50,6 @@
                 @endif
             @endauth
             </ul>
-
         </div>
       </div>
       </nav>

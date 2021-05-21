@@ -1,6 +1,4 @@
 <div>
-  @livewire('category-list')
-
-   @livewire('list-of-skills')
-
+  @livewire('skills')
+  @livewire('list-of-skills')
 </div>

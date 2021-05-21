@@ -42,7 +42,7 @@
 
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-500">Begin: {{$e->date_begin}}</div>
-                  <div class="text-sm text-gray-500">Begin: {{$e->date_end}}</div>
+                  <div class="text-sm text-gray-500"> End   : {{$e->date_end}}</div>
                 </td>
                 <td class="px-6 py-4 text-justify font-medium">
                  {{$e->description}}

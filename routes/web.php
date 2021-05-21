@@ -17,6 +17,7 @@ use App\Http\Livewire\UserCv;
 use App\Http\Livewire\UserExperience;
 use App\Http\Livewire\UserFiles;
 use App\Http\Livewire\UserProfile;
+use App\Http\Livewire\UserSkills;
 
 Route::get('/', function () {
     return view('welcome')->layout('layouts.bpp');
@@ -55,6 +56,19 @@ Route::get('/keep-your-job', function () {
 Route::get('/job-interview', function () {
     return view('job-interview')->layout('layouts.cpp');
 });
+
+Route::get('/interview-prepare', function () {
+    return view('interview-prepare')->layout('layouts.cpp');
+});
+
+Route::get('/cv-mistakes', function () {
+    return view('cv-mistakes')->layout('layouts.cpp');
+});
+
+Route::get('/successfull-cv', function () {
+    return view('successfull-cv')->layout('layouts.cpp');
+});
+
 
 
 
@@ -100,9 +114,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/user-profile',UserProfile
 Route::middleware(['auth:sanctum', 'verified'])->get('/experiences',UserExperience::class)->name('experiences');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/skills', function () {
-    return view('skills.index');
+    return view('skills.index')->layout('layouts.cpp');
 })->name('skills.index');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/user-skills',SkillList::class)->name('user-skills');
+Route::middleware(['auth:sanctum', 'verified'])->get('/user-skills',UserSkills::class)->name('user-skills');
 
 

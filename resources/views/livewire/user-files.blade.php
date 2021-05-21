@@ -5,7 +5,9 @@
 </x-slot>
 <div class="grid grid-cols-1 mx-auto bg-gray-100 py-2 w-full md:w-2/5">
     <div class="container bg-white py-2 px-3 rounded shadow-md">
-        <form wire:submit.prevent="store")>
+        <h2 class="text-center text-orange-900 text-xl sm:text-xl font-bold p-3">Pdf files of {{auth()->user()->name}}</h2>
+        <form wire:submit.prevent="store") class="p-2 border-2 ">
+            <h2 class="text-blue-600 text-xl sm:text-xl font-bold">Add New Pdf</h2>
             <div class="w-full bg-white p-2 m-3">
                 <x-jet-label for="archivo" value="{{ __('Select Pdf file') }}" />
                 <x-jet-input type="file" class="mt-1 block w-full" wire:model="archivo"
@@ -13,8 +15,8 @@
                 <x-jet-input-error for="file" class="mt-2" />
             </div>
             <div class="w-full bg-white p-2 m-3">
-                <x-jet-label for="resume" value="{{ $resume ? 'Upload may Resume':'please click if you plan to upload your resume ' }}" />
-                <x-jet-input type="checkbox" class="mt-1 block w-1/4 bg-blue-400 cursor-pointer hover:bg-green-600 hover:text-blue-800 h-4 w-4" wire:model="resume"
+                <x-jet-label for="resume" value="{{ $resume ? 'Upload my Resume':'please click if you plan to upload your resume ' }}" />
+                <x-jet-input type="checkbox" class="mt-1 block w-1/4 bg-blue-400 cursor-pointer hover:bg-green-600 hover:text-blue-800 h-4" wire:model="resume"
                   title="please click if you plan to upload your resume"  />
                 <x-jet-input-error for="file" class="mt-2" />
             </div>
@@ -23,24 +25,33 @@
             <div class=" w-1/12 bg-white p-2 m-3">
                 <div class="justify-center items-center">
                     <button type="submit"
-                        class="bg-green-800 text-white py-2 px-4 rounded my-2">Upload</button>
+                        class="bg-green-800 text-white py-2 px-4 rounded my-2">
+                        <i class="fas fa-file-upload"><span  class="ml-2 text-white">Upload</span></i>
+
+                    </button>
                 </div>
             </div>
         </form>
         <div class=" w-1/12 bg-white p-2 m-3">
             <div class="justify-center items-center">
-                <a href="{{route('user-profile')}}" class="px-3 py-2 bg-blue-400 rounded cursor-pointer hover:bg-blue-700 hover:text-white">Profile</a>
+                <a href="{{route('user-profile')}}" class="px-3 py-2 bg-blue-400 rounded cursor-pointer hover:bg-blue-700 hover:text-white" title="Go To Profile...">
+                    <i class="fas fa-link"><span  class="ml-2 text-white">Profile</span></i>
+                    </a>
             </div>
         </div>
     </div>
 
     <div class="grid grid-cols-1 mx-auto bg-gray-100 py-2 w-full md:w-full">
+        <h2 class="text-center text-orange-900 text-xl sm:text-xl font-bold p-3">List of {{auth()->user()->name}} Pdfs File</h2>
+
         <div class="container bg-white py-2 px-3 rounded shadow-md">
-            <ul>
+            <div class="caja90 p-5">
+            <ul class="flex flex-col list-disc">
                 @foreach ($files as $f )
-                   <li class="flex flex-row">
+                   <li class="">
                        <a href="#" wire:click="destroy({{$f->id}})">
-                        <i class="far fa-trash-alt"></i>
+                        <span class="mx-3"><i class="far fa-trash-alt text-red-600" title="Delete item"></i>
+                        </span>
                       {{$f->name}}
                        @if ($f->resume)
                            <span class="text-xs font-bold ml-3">your Resume </span class="text-xs font-bold ml-3">
@@ -50,6 +61,7 @@
                     </li>
                 @endforeach
             </ul>
+            </div>
         </div>
     </div>
 

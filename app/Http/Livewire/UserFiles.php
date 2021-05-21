@@ -19,7 +19,7 @@ class UserFiles extends Component
     public function render()
     {
         $files = auth()->user()->files;
-        return view('livewire.user-files',['files'=>$files]);
+        return view('livewire.user-files',['files'=>$files])->layout('layouts.cpp');
     }
 
     public function store()

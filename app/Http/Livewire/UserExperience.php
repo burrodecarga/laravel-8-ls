@@ -25,7 +25,7 @@ class UserExperience extends Component
     {
         $experience = auth()->user()->experiences;
 
-        return view('livewire.user-experience');
+        return view('livewire.user-experience')->layout('layouts.cpp');
     }
 
 

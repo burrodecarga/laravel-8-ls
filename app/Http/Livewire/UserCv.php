@@ -17,6 +17,6 @@ class UserCv extends Component
             'experiences' =>$experiences,
             'profile' =>$profile,
             'tags' =>$tags
-        ]);
+        ])->layout('layouts.cpp');
     }
 }

@@ -11,6 +11,7 @@
             <div class="grid  grid-cols-1 md:col-start-1 md:col-span-6 gap-2 p-1 bg-white rounded">
                 <div>
                     <form class="{{$formCreate}}" wire:submit.prevent="createData">
+                        <h2 class="text-center text-orange-900 text-2xl sm:text-3xl font-bold">Add New Experience</h2>
                         <div class="flex flex-col md:flex-row">
                             <div class=" w-full md:w-3/12 bg-white p-3">
                                 <div class="flex-1 m-2">
@@ -118,9 +119,9 @@
             <div class="grid col-start-7 gap-2 p-4 bg-white rounded">
                 <div class="flex flex-col">
                     <a href="{{route('user-profile')}}"
-                        class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">Personal Information</a>
+                        class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">Profile</a>
                     <a href="{{route('user-skills')}}"
-                        class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">skill</a>
+                        class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">skills</a>
                     <a href="#"
                         class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">skill</a>
                 </div>
