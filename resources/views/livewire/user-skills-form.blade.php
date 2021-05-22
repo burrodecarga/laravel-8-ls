@@ -1,6 +1,6 @@
 <div class="bg-gray-300 p-3 rounded">
     <h2 class="text-center text-orange-900 text-2xl sm:text-3xl font-bold">Add Skill for {{auth()->user()->name}}</h2>
-    <form class="grid grid-cols-1 items-center md:grid-cols-3 gap-2 bg-white rounded p-3">
+    <form class="grid grid-cols-1 items-center md:grid-cols-4 gap-2 bg-white rounded p-3">
        <input type="hidden" wire:model="skillId">
         <div>
           <x-jet-label for="cost" value="{{ __('Category') }}" />
@@ -19,6 +19,16 @@
                 placeholder=" Enter skills (e.g. Web Designer)" />
             <x-jet-input-error for="skill" class="mt-2" />
         </div>
+        <div>
+            <x-jet-label for="myLevel" value="{{ __('Level') }}" />
+              <select class="my-2 rounded w-full" wire:model="myLevel">
+                  <option value="myLevel">Level</option>
+                  @foreach ($levels as $c )
+                       <option value="{{$c->id}}">{{$c->name}}</option>
+                  @endforeach
+              </select>
+              <x-jet-input-error for="myLevel" class="mt-2" />
+          </div>
           <div>
             <x-jet-label for="" value="{{ __('action')}}" />
             <button class=" py-2 px-3 text-white bg-green-500 hover:bg-green-700 rounded w-1/2 {{$create}}"

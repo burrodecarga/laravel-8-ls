@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Category;
 use App\Models\Knowledge;
+use App\Models\Level;
 use App\Models\Skill;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -20,19 +21,19 @@ class UserSkillsForm extends Component
     public $skillId=0;
     public $create ='';
     public $update ='hidden';
+    public $myLevel;
+    public $level;
 
-    protected  $rules = ['category' => 'required','skillId'=>'numeric'];
+    protected  $rules = ['category' => 'required','skillId'=>'numeric','myLevel'=>'required'];
 
     public function render()
     {
         $categories = Category::orderBy('name')->get();
-        // $skills = auth()->user()->skills;
-        // $knowledge = auth()->user()->knowledge;
+        $levels = Level::all();
         return view('livewire.user-skills-form',[
             'categories' =>$categories,
             'selectCategory' =>$this->selectCategory,
-            // 'skills' =>$skills,
-            // 'knowledge' =>$knowledge
+             'levels' =>$levels
         ]);
     }
 
@@ -61,12 +62,9 @@ class UserSkillsForm extends Component
              'name'=>$newSkill,
              'slug'=> Str::slug($newSkill),
              'user_id'=>auth()->user()->id,
+             'level'=>$this->myLevel
           ]);
-        //  if(!is_null($listOfSkills)){
-        //   array_push($listOfSkills, $new->id);
-        //  }else{
-        //     $listOfSkills[]=$new->id;
-        //  }
+
         $this->emit('dibujar');
         $this->emitTo('UserSkills','render');
            }
@@ -74,7 +72,9 @@ class UserSkillsForm extends Component
         auth()->user()->skills()->sync($listOfSkills);
       }
         $this->reset();
-        $this->render();
+        $this->emit('dibujar');
+        $this->emitTo('SkillsTable','render');
+
         $this->emit('alert', 'Your Skill was created successfully');
     }
 }

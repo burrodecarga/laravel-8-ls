@@ -1,0 +1,33 @@
+[
+    {"id":"1",
+      "name":"A1 – Breakthrough (Beginner)",
+      "class":"bg-red-300"
+    },
+    {
+        "id":"2",
+        "name":"A2 – Waystage (Elementary)",
+        "class":"bg-red-100"
+    },
+    {
+        "id":"3",
+        "name":"B1 – Threshold (Intermediate)",
+        "class":"bg-green-300"
+    },
+    {
+        "id":"4",
+        "name":"B2 – Vantage (Upper Intermediate)",
+        "class":"bg-green-600"
+    },
+    {
+        "id":"5",
+        "name":"C1 – Effective Operational Proficiency (Advanced)",
+        "class":"bg-blue-400"
+    },
+    {
+        "id":"6",
+        "name":"C2 – Mastery (Proficiency)",
+        "class":"bg-yellow-600"
+    }
+]
+
+

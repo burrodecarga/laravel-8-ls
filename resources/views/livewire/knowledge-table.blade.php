@@ -44,8 +44,8 @@
                             </td>
 
                             <td class="px-6 py-4  text-right text-sm font-medium">
-                                <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                                    Edit</a>
+                                <a href="#" wire:click="destroy({{$s->id}})">
+                                    <i class="fas fa-trash-alt text-red-600"></i></a>
                             </td>
                         </tr>
                         @endforeach

@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Level extends Model
+class SkillUser extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','class'];
 
-    public function skill_user()
+    public function levels()
     {
-        return $this->belongsToMany(SkillUser::class);
+        return $this->belongsToMany(Level::class);
     }
-
 }

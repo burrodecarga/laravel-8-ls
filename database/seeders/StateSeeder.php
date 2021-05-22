@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Category;
 use App\Models\Focal;
+use App\Models\Level;
 use App\Models\Salary;
 use App\Models\State;
 use App\Models\Schedule;
@@ -69,6 +70,17 @@ class StateSeeder extends Seeder
          $category->save();
         }
 
+        $json =File::get("database/data/level.json");
+        $data = json_decode($json);
+
+        foreach ($data as $obj) {
+            $level = new Level();
+            $level->name =$obj->name;
+            $level->class= $obj->class;
+            $level->save();
+      }
+
+
         $json =File::get("database/data/data.json");
         $data = json_decode($json);
         foreach ($data as $obj) {
@@ -105,6 +117,8 @@ class StateSeeder extends Seeder
                 $focal->video = $obj->video;
                 $focal->save();
           }
+
+
 
 
 

@@ -8,7 +8,6 @@
 
         <div class="caja90 p-4">
                     <h2 class="text-orange-900 text-xl sm:text-2xl font-bold">General Skills</h2>
-
     @livewire('skills-table')
      </div>
 </div>
