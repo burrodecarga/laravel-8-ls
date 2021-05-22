@@ -20,7 +20,7 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
 
-                        @foreach ($skills as $s )
+                        @foreach ($knowledge as $s )
                         <tr>
                             <td class="px-6 py-4 ">
                                 <div class="flex items-center">
@@ -37,10 +37,9 @@
                             </td>
 
                             <td class="px-6 py-4 ">
-                                <i class="fas fa-text-height"></i>
                                 <span
                                     class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                   {{$s->level}}
+                                    Level
                                 </span>
                             </td>
 
@@ -50,8 +49,12 @@
                             </td>
                         </tr>
                         @endforeach
+                        <!-- More people... -->
                     </tbody>
                 </table>
+                <div>
+                   {{ $knowledge->links()}}
+                </div>
             </div>
         </div>
     </div>

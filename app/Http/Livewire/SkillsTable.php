@@ -8,6 +8,7 @@ class SkillsTable extends Component
 {
     public function render()
     {
-        return view('livewire.skills-table');
+        $skills = auth()->user()->skills;
+        return view('livewire.skills-table',['skills'=>$skills]);
     }
 }

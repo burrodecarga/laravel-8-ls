@@ -10,6 +10,6 @@ class FocalPoits extends Component
     public function render()
     {
         $focalPoints = Focal::all();
-        return view('livewire.focal-poits',['focalPoints'=>$focalPoints]);
+        return view('livewire.focal-poits',['focalPoints'=>$focalPoints])->layout('layouts.cpp');
     }
 }

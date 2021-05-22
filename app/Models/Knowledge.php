@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Skill extends Model
+class Knowledge extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'category',
         'category_id',
         'name',
         'slug',
         'level_id',
+        'user_id'
     ];
 
     public function setNameAttribute($value)
@@ -22,15 +22,14 @@ class Skill extends Model
         $this->attributes['name'] = ltrim(ucfirst($value));
     }
 
-
-    public function users()
+    public function user()
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->belongsTo(User::class);
     }
 
     public function category()
     {
-     return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
 }

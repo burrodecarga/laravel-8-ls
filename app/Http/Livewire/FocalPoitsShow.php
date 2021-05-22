@@ -14,6 +14,6 @@ class FocalPoitsShow extends Component
     {
 
          $src =$this->focal->video;
-        return view('livewire.focal-poits-show',['point'=>$this->focal,'src'=>$src]);
+        return view('livewire.focal-poits-show',['point'=>$this->focal,'src'=>$src])->layout('layouts.cpp');
     }
 }

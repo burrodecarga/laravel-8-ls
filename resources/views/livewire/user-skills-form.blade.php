@@ -3,7 +3,7 @@
     <form class="grid grid-cols-1 items-center md:grid-cols-3 gap-2 bg-white rounded p-3">
        <input type="hidden" wire:model="skillId">
         <div>
-          <x-jet-label for="cost" value="{{ __('category') }}" />
+          <x-jet-label for="cost" value="{{ __('Category') }}" />
             <select class="my-2 rounded w-full" wire:model="category" wire:change='getCategory'>
                 <option value="category">category</option>
                 @foreach ($categories as $c )
@@ -13,7 +13,7 @@
             <x-jet-input-error for="category" class="mt-2" />
         </div>
         <div>
-            <x-jet-label for="skill" value="{{ __('skill')}}" />
+            <x-jet-label for="skill" value="{{ __('New knowledge for the category')}}" />
             <x-jet-input id="skill" type="text" class="w-full" wire:model.defer="skill"
                 autocomplete="skill"
                 placeholder=" Enter skills (e.g. Web Designer)" />
@@ -30,13 +30,13 @@
             >update</button>
         </div>
         <div class="col-span-full border-2 border-gray-200 p-3 wrap">
-            @foreach ($selectCategory as $cat )
-             <span class="mx-4 my-3 p-2 text-xs text-justify text-blue-700 inline-block">
-                  <input type="checkbox" name="seleccionados">
-             {{$cat->name}}
-             </span>
+            @foreach ($selectCategory as $index=>$cat )
+            <span class="inline-block">
+            <label class="text-blue-700 text-justify">{{$cat->name}}</label>
+            <input wire:model="selectSkills.{{ $index }}" value="{{ $cat->id }}"
+            type="checkbox" class="m-4"></span>
             @endforeach
         </div>
-
     </form>
 </div>
+
