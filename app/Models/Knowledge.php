@@ -14,7 +14,7 @@ class Knowledge extends Model
         'name',
         'slug',
         'level_id',
-        'user_id'
+        'user_id','status'
     ];
 
     public function setNameAttribute($value)

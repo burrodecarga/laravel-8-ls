@@ -13,7 +13,7 @@ class KnowledgeTable extends Component
 
     public function render()
     {
-        $knowledge = auth()->user()->knowledge()->paginate(10);
+        $knowledge = auth()->user()->knowledge->where('status',1);
 
         return view('livewire.knowledge-table',['knowledge'=>$knowledge]);
     }

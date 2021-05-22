@@ -1,0 +1,173 @@
+.bg-about {
+    background: url(/assets/media/about-us/about-us-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .bg-about::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+
+  /* end about */
+
+  .bg-jobs {
+    background: url(/assets/media/jobs/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .bg-jobs::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+/* end bg-jobs */
+
+  .bg-candidates {
+    background: url(/assets/media/candidates/pic3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+
+
+  .bg-candidates::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+
+  .bg-employers {
+    background: url(/assets/media/employers/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .bg-employers::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+
+  .bg-services {
+    background: url(/assets/media/services/services.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .bg-services::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+
+
+  .bg-contact-us {
+    background: url(/assets/media/contact/contact-us.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .bg-contact-us::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+
+  .bg-user-cv {
+    background: url(/assets/media/candidates/resume.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .bg-user-cv::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }
+
+  .candidates {
+    background: url(/assets/media/jobs/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .candidates::after {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .45;
+    z-index: -1;
+  }

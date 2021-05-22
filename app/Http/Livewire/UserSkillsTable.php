@@ -2,20 +2,19 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Skill;
-use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
-class SkillsTable extends Component
+class UserSkillsTable extends Component
 {
     protected $listeners = ['dibujar'];
     public $skill;
 
     public function render()
     {
-        $skills = auth()->user()->skills;
-        return view('livewire.skills-table',['skills'=>$skills]);
+        $skills = auth()->user()->knowledge->where('status',0);
+        return view('livewire.user-skills-table',['skills'=>$skills]);
     }
+
 
     public function dibujar()
     {
@@ -29,7 +28,7 @@ class SkillsTable extends Component
 
     public function level($skill_id)
     {
-        
+
 
     }
 }

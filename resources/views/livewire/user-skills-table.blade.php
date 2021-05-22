@@ -20,7 +20,7 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
 
-                        @foreach ($knowledge as $s )
+                        @foreach ($skills as $s )
                         <tr>
                             <td class="px-6 py-4 ">
                                 <div class="flex items-center">
@@ -37,10 +37,13 @@
                             </td>
 
                             <td class="px-6 py-4 ">
+                                <a href="#" wire:click="level({{$s->id}})">
+                                <i class="fas fa-text-height" wire:click="level({{$s->id}})"></i>
                                 <span
                                     class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                    Level
+                                   {{$s->level_id}}
                                 </span>
+                                </a>
                             </td>
 
                             <td class="px-6 py-4  text-right text-sm font-medium">
@@ -51,8 +54,8 @@
                         @endforeach
                     </tbody>
                 </table>
-
             </div>
         </div>
     </div>
 </div>
+
