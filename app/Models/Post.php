@@ -63,4 +63,9 @@ class Post extends Model
         return $this->belongsToMany(User::class)->withTimestamps();
     }
 
+
+    public function scopeCandidates($query){
+        return $query->where('id',auth()->user()->id);
+    }
+
 }

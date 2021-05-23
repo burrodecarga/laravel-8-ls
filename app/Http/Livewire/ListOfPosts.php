@@ -55,7 +55,7 @@ class ListOfPosts extends Component
                 'schedules'=>$schedules,
                 'posts'=>$posts
             ]
-        );
+        )->layout('layouts.cpp');
     }
 
     public function sorted($campo)

@@ -65,6 +65,7 @@ class CreatePost extends Component
         //       $this->reset();
 
         $this->emitTo('ListOfpost', 'render');
+        $this->emit('AdminPostrender');
         $this->emit('alert', 'Job offer was created successfully');
         $this->reset();
     }
