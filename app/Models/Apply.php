@@ -11,8 +11,14 @@ class Apply extends Model
 
     protected $fillable = [
         'post_id',
-        'candidate_id'
+        'user_id'
     ];
 
-   
+
+    public function applies()
+    {
+        return $this->hasMany(Apply::class);
+    }
+
+
 }

@@ -13,6 +13,7 @@ use App\Http\Livewire\ListOfUsers;
 use App\Http\Livewire\ShowJob;
 use App\Http\Livewire\ShowLegal;
 use App\Http\Livewire\SkillList;
+use App\Http\Livewire\UserApplies;
 use App\Http\Livewire\UserCv;
 use App\Http\Livewire\UserExperience;
 use App\Http\Livewire\UserFiles;
@@ -73,6 +74,9 @@ Route::get('/successfull-cv', function () {
     return view('successfull-cv')->layout('layouts.cpp');
 });
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
+    return view('admin')->layout('layouts.cpp');
+})->name('admin');
 
 
 
@@ -116,6 +120,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/legal',ShowLegal::class)-
 Route::middleware(['auth:sanctum', 'verified'])->get('/user-profile',UserProfile::class)->name('user-profile');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/experiences',UserExperience::class)->name('experiences');
+Route::middleware(['auth:sanctum', 'verified'])->get('/user-applies',UserApplies::class)->name('user-applies');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/skills', function () {
     return view('skills.index')->layout('layouts.cpp');

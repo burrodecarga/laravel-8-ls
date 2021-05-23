@@ -13,4 +13,9 @@ class Candidate extends User
     {
         return $this->hasMany(Apply::class);
     }
+
+    public function candidate()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

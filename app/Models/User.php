@@ -122,4 +122,9 @@ class User extends Authenticatable
         return $this->hasMany(knowledge::class);
     }
 
+    public function applies()
+    {
+        return $this->hasMany(Apply::class);
+    }
+
 }

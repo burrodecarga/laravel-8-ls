@@ -15,7 +15,7 @@ class ShowLegal extends Component
     public function render()
     {
         $this->declare = (auth()->user()->legals()->count() <> 0);
-        return view('livewire.show-legal',['declare'=>$this->declare]);
+        return view('livewire.show-legal',['declare'=>$this->declare])->layout('layouts.cpp');
     }
 
     public function declare()
