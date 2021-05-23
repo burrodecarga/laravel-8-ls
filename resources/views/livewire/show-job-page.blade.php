@@ -99,8 +99,15 @@
 
         <button class="bg-red-600 py-2 px-3 text-white hover:bg-red-300" wire:click="$set('showJob','hidden')">Back</button>
     </div>
+
+</div>
+</div>
+<div class="tapar bg-white text-white">
+
 </div>
 </x-marco>
-</div>
+
+
+
 
 

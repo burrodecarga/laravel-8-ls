@@ -59,19 +59,38 @@
       <input type="checkbox" class="toggler">
       <div class="hamburger">
       <div><!-- do not delete this empty div --></div></div>
-      <div class="menu-mobile">
+      <div class="menu-mobile z-99">
       <div>
       <div>
-      <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="/about">About us</a></li>
-                <li><a href="./jobs/">Jobs</a></li>
-                <li><a href="./candidates/">Candidates</a></li>
-                <li><a href="./employers/">Employers</a></li>
-                <li><a href="./services/">Services</a></li>
-                <li><a href="./contact-us/">Contact us</a></li>
-            </ul>
-      </div>
+        <ul>
+            <li><a class="text-white" href="{{url('/dashboard')}}">Home</a></li>
+            <li><a class="text-white" href="{{ url('/about')}} ">About us</a></li>
+            <li><a class="text-white" href="./jobs/">Jobs</a></li>
+            <li><a class="text-white" href="{{url('/candidates')}}">Candidates</a></li>
+            <li><a class="text-white" href="{{url('/employers')}}">Employers</a></li>
+            <li><a class="text-white" href="{{url('/services')}}">Services</a></li>
+            <li><a class="text-white" href="{{url('/contact')}}">Contact us</a></li>
+            @auth
+            <li><a class="text-white" href="{{route('profile.show')}}">perfil</a></li>
+            <li><a class="text-white" href="{{route('user-profile')}}">profile</a></li>
+            <li>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <a class="text-white" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                    {{ __('Log Out') }}
+                </a>
+            </form>
+            </li>
+            @else
+            <li><a class="text-white" href="{{route('login')}}">Login</a></li>
+            @if (Route::has('register'))
+             <li><a class="text-white" href="{{route('register')}}">Register</a></li>
+            @endif
+        @endauth
+        </ul></div>
       </div>
       </div>
       </div>

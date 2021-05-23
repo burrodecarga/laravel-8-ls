@@ -23,6 +23,10 @@ Route::get('/', function () {
     return view('welcome')->layout('layouts.bpp');
 });
 
+Route::get('/home', function () {
+    return view('home')->layout('layouts.bpp');
+});
+
 Route::get('/about', function () {
     return view('about')->layout('layouts.bpp');
 });
@@ -73,8 +77,8 @@ Route::get('/successfull-cv', function () {
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard')->layout('layouts.bpp');
-})->name('dashboard');
+    return view('dashboard')->layout('layouts.cpp');
+})->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/laboral', function () {
     return view('laboral.show');

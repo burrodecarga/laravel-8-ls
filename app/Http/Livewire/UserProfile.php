@@ -18,6 +18,12 @@ class UserProfile extends Component
     public $about = '';
     public $availability = '';
     public $birthdate;
+    public $pageClass = '';
+
+    public $classTitulo;
+    public $classSubTitulo;
+    public $pageTitulo;
+    public $pageSubTitulo;
 
 
     public $title = '';
@@ -30,7 +36,13 @@ class UserProfile extends Component
     {
         $profile = auth()->user()->profile;
         if ($profile) $this->asignaProfile($profile);
-        return view('livewire.user-profile')->layout('layouts.cpp');
+        return view('livewire.user-profile')->layout('layouts.bpp', [
+            'pageClass' => $this->pageClass,
+            'classTitulo' => $this->classTitulo,
+            'classSubTitulo' => $this->classSubTitulo,
+            'pageTitulo' => $this->pageTitulo,
+            'pageSubTitulo' => $this->pageSubTitulo,
+        ]);
     }
 
     public function asignaProfile($profile)
@@ -55,8 +67,8 @@ class UserProfile extends Component
             'title' => 'string',
             'cost' => 'numeric',
             'availability' => 'string',
-            'about' =>'string',
-              ];
+            'about' => 'string',
+        ];
         $values = $this->validate($rules);
 
         $fecha = $values['birthdate'];
