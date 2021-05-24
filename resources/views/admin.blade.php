@@ -13,6 +13,7 @@
 <x-slot name="pageSubTitulo">
     To help find the best candidate for your job offers
 </x-slot>
+<h1 class="mx-auto text-center text-2xl font-semibold underline p-2">List of offers make by {{auth()->user()->name}}</h1>
 <div class="grid grid-cols-12 gap-1 bg-white">
    <div class="col-start-1 col-end-11">
         @livewire('admin-post')

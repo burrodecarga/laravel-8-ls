@@ -35,7 +35,7 @@ class AdminPost extends Component
         $states = State::all()->pluck('name');
         $schedules = Schedule::all()->pluck('name');
 
-        $posts = Post::termino($this->search)
+        $posts = Post::candidates($this->search)
         ->state($this->state)
         ->salary($this->max_salary)
         ->schedule($this->schedule);
@@ -43,7 +43,6 @@ class AdminPost extends Component
         if ($this->campo && $this->order) {
             $posts = $posts->orderBy($this->campo, $this->order);
         }
-
         $posts = $posts->orderBy('created_at','desc')->paginate($this->paginate);
         return view(
             'livewire.admin-post',
@@ -138,9 +137,9 @@ class AdminPost extends Component
         $this->emit('alert',$message);
 }
 
-public function showCandidates(Post $post)
+public function showCandidates($id)
 {
-    dd($post);
+   return redirect()->route('admin-candidates',compact('id'));
 }
 
 public function AdminPostrender(){$this->render();}

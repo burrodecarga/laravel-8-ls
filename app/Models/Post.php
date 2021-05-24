@@ -28,9 +28,10 @@ class Post extends Model
     ];
 
 
+
     public function scopeTermino($query,$termino)
     {
-       if($termino === ''){ return;}
+       if($termino === ''){ return ;}
        return $query->where('title','like',"%{$termino}%");
     }
 
@@ -64,8 +65,12 @@ class Post extends Model
     }
 
 
-    public function scopeCandidates($query){
-        return $query->where('id',auth()->user()->id);
+    public function scopeCandidates($query,$termino){
+        if($termino === ''){
+                 return $query->where('user_id',auth()->user()->id);
+         }
+       return $query->where('title','like',"%{$termino}%")
+                    ->where('user_id',auth()->user()->id);
     }
 
 }

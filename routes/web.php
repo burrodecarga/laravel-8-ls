@@ -3,7 +3,9 @@
 use App\Http\Livewire\ListOfJobs;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RoleController;
+use App\Http\Livewire\AdminCandidate;
 use App\Http\Livewire\ContactUs;
 use App\Http\Livewire\FocalPoits;
 use App\Http\Livewire\FocalPoitsShow;
@@ -19,6 +21,7 @@ use App\Http\Livewire\UserExperience;
 use App\Http\Livewire\UserFiles;
 use App\Http\Livewire\UserProfile;
 use App\Http\Livewire\UserSkills;
+use PharIo\Manifest\Url;
 
 Route::get('/', function () {
     return view('welcome')->layout('layouts.bpp');
@@ -79,7 +82,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
 })->name('admin');
 
 
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard')->layout('layouts.cpp');
 })->name('home');
@@ -95,9 +97,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/user-files', UserFiles::c
 Route::middleware(['auth:sanctum', 'verified'])->get('/focal-points',FocalPoits::class)->name('focal-points');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/focal-points/{focal}',FocalPoitsShow::class)->name('focal-points-show');
-
-
-
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/users',ListOfUsers::class)->name('users');
@@ -129,3 +128,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/skills', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/user-skills',UserSkills::class)->name('user-skills');
 
 
+Route::get(
+    '/admin-candidates/{id}',
+    [AdminController::class, 'show']
+)->name('admin-candidates');

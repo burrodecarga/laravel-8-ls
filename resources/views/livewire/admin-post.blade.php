@@ -88,7 +88,7 @@
                                     <td class="px-6 py-4">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 h-10 w-10">
-                                                <a href="#"> <img class="h-10 w-10 rounded"
+                                                <a href="javascript:void(0)"> <img class="h-10 w-10 rounded"
                                                         src="{{asset('assets/jobs/paper-look.svg')}} " alt="">
                                                 </a>
                                             </div>
@@ -109,8 +109,13 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex flex-center text-sm text-gray-900">
-                                            <img src="{{ asset('assets/jobs/pin.svg')}} " alt="{{$post->city}}"
-                                                class="w-3 mr-2">
+                                            <span class="text-orange-900 mr-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                              </svg>
+
+                                            </span>
 
 
                                         <div class="text-sm text-gray-500 flex flex-col">
@@ -121,14 +126,14 @@
                                         </div>
                                       </div>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white text-center">
-                                        <p class="{{$post->class}} w-50 p-2">{{$post->schedule}}</p>
+                                    <td class="px-2 py-2 whitespace-nowrap text-sm text-white text-center">
+                                        <p class="{{$post->class}} w-50 ">{{$post->schedule}}</p>
                                     </td>
                                 </td>
                                 <td class="px-6 py-4 text-sm text-white text-center cursor-pointer">
-                                    <p class="{{$post->active==1 ? 'bg-green-700 rounded-full':'bg-red-700 rounded-full'}} w-10 p-2"
+                                    <p class="{{$post->active==1 ? 'bg-green-500 rounded-full':'bg-red-500 rounded-full'}} w-10"
                                         wire:click="pubPost({{$post->id}})"
-                                        >{{$post->active==1 ? 'Y':'N'}}</p>
+                                        title="{{$post->active==1 ? 'Publish':'No Publish'}}">{{$post->active==1 ? 'Y':'N'}}</p>
                                 </td>
                                 <td class="cliquear  hover:bg-gray-100  text-green-600 hover:text-blue-600">
                                     <a href="javascript:void(0)" wire:click="showCandidates({{$post->id}})" title="List of Candidates">
