@@ -43,10 +43,11 @@ class ShowUser extends Component
     {
 
         $values = $this->validate($this->rules);
+        //dd($values);
         $this->user = User::find($values['userId']);
         $this->user->name = $values['name'];
         $this->user->email = $values['email'];
-        $this->user->role = $values['role'];
+        $this->user->assignRole($values['role']);
         $this->user->save();
 
         $this->emit('render');

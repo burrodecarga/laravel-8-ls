@@ -12,7 +12,7 @@ use App\Models\Schedule;
 use App\Models\Skill;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-
+use Spatie\Permission\Models\Permission;
 
 class StateSeeder extends Seeder
 {
@@ -116,6 +116,17 @@ class StateSeeder extends Seeder
                 $focal = Focal::find($obj->id);
                 $focal->video = $obj->video;
                 $focal->save();
+          }
+
+          $json =File::get("database/data/rutas.json");
+         $data = json_decode($json);
+
+          foreach ($data as $obj) {
+
+                $permission = new Permission();
+                $permission->name = $obj->name;
+                $permission->permission = $obj->route;
+                $permission->save();
           }
 
 

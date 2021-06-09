@@ -36,7 +36,7 @@ class ListOfUsers extends Component
 
         return view('livewire.list-of-users', [
             'users' => $users
-        ]);
+        ])->layout('layouts.cpp');
     }
 
 

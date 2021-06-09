@@ -19,16 +19,9 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $role = Role::create(['name' => 'super-admin']);
-        $role->givePermissionTo(Permission::all());
 
-        $user =User::create([
-            'name' => 'Edwin Henriquez',
-            'email' => 'ed@gmail.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('123'),
-            'remember_token' => Str::random(10)]);
-        $user->assignRole('super-admin');
+
+
     }
 
 }

@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-cpp-layout>
     <div class="flex justify-center">
         <div class="flex w-3/5">
             <div class="flex-1 m-4 text-green-700 hover:text-green-300" title="{{__('Create new Role ')}}">
@@ -72,4 +72,4 @@
             </div>
     </div>
 
-</x-app-layout>
+</x-cpp-layout>

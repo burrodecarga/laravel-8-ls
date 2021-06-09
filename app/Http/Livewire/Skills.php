@@ -31,7 +31,7 @@ class Skills extends Component
         return view('livewire.skills',[
             'skills' =>$skills,
             'categories' =>$categories,
-        ]);
+        ])->layout('layouts.cpp');
     }
 
 

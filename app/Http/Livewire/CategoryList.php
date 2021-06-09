@@ -31,7 +31,7 @@ class CategoryList extends Component
         return view('livewire.category-list',[
             'categories' =>$categories,
             'skillsOfCategory' => $skillsOfCategory,
-        ]);
+        ])->layout('layouts.cpp');
     }
 
     public function createSkill($s,$c)

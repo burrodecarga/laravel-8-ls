@@ -1,4 +1,4 @@
-<div>
+<div class="caja80 p-4 text-center mx-auto">
 <div class="bg-gray-300 p-3 rounded">
     <h2 class="text-center text-orange-900 text-2xl sm:text-3xl font-bold">Add General Skill</h2>
     <form class="flex flex-row flex-wrap p-4 bg-white rounded">

@@ -24,17 +24,28 @@
             <ul>
                 <li><a class="text-white" href="{{url('/dashboard')}}">Home</a></li>
                 <li><a class="text-white" href="{{ url('/about')}} ">About us</a></li>
+                @hasanyrole('candidate|employer')
                 <li><a class="text-white" href="./jobs/">Jobs</a></li>
+                @endhasanyrole
+                @hasanyrole('candidate')
                 <li><a class="text-white" href="{{url('/candidates')}}">Candidates</a></li>
+                @endhasanyrole
+                @hasanyrole('employer')
                 <li><a class="text-white" href="{{url('/employers')}}">Employers</a></li>
+                @endhasanyrole
+                @hasanyrole('candidate|employer')
                 <li><a class="text-white" href="{{url('/services')}}">Services</a></li>
                 <li><a class="text-white" href="{{url('/contact')}}">Contact us</a></li>
-                @auth
+                @endhasanyrole
+                  @auth
                 <li><a class="text-white" href="{{route('profile.show')}}">perfil</a></li>
-                <li><a class="text-white" href="{{route('user-profile')}}">profile</a></li>
-                                   <li><a class="text-white" href="{{route('admin')}}">admin</a></li>
- <li>
-                <form method="POST" action="{{ route('logout') }}">
+                @hasanyrole('candidate|employer')
+                <li><a class="text-white mr-4" href="{{route('user-profile')}}">profile</a></li>
+                @endhasanyrole
+                @hasanyrole('admin|super-admin')
+                <li><a class="text-white" href="{{route('admin')}}">admin</a></li>
+ <li>           @endhasanyrole
+                <form method="POST" action="{{ route('logout') }}" class="ml-4">
                     @csrf
 
                     <a class="text-white" href="{{ route('logout') }}"

@@ -1,0 +1,177 @@
+[
+    {
+        "route": "livewire/message/{name}",
+        "name": "livewire.message"
+    },
+    {
+        "route": "livewire/upload-file",
+        "name": "livewire.upload-file"
+    },
+    {
+        "route": "livewire/preview-file/{filename}",
+        "name": "livewire.preview-file"
+    },
+    {
+        "route": "home",
+        "name": "home-x"
+    },
+    {
+        "route": "about",
+        "name": "about"
+    },
+    {
+        "route": "candidates",
+        "name": "candidates"
+    },
+    {
+        "route": "employers",
+        "name": "employers"
+    },
+    {
+        "route": "services",
+        "name": "none"
+    },
+    {
+        "route": "contact",
+        "name": "contact"
+    },
+    {
+        "route": "skype-interview",
+        "name": "skype-interview"
+    },
+    {
+        "route": "work-from-home",
+        "name": "work-from-home"
+    },
+    {
+        "route": "keep-your-job",
+        "name": "keep-your-job"
+    },
+    {
+        "route": "job-interview",
+        "name": "keep-your-interview"
+    },
+    {
+        "route": "interview-prepare",
+        "name": "interview-prepare"
+    },
+    {
+        "route": "cv-mistakes",
+        "name": "cv-mistakes"
+    },
+    {
+        "route": "successfull-cv",
+        "name": "successfull-cv"
+    },
+    {
+        "route": "admin",
+        "name": "admin"
+    },
+    {
+        "route": "dashboard",
+        "name": "home"
+    },
+    {
+        "route": "laboral",
+        "name": "laboral"
+    },
+    {
+        "route": "resume",
+        "name": "resume"
+    },
+    {
+        "route": "user-files",
+        "name": "user-files"
+    },
+    {
+        "route": "focal-points",
+        "name": "focal-points"
+    },
+    {
+        "route": "focal-points/{focal}",
+        "name": "focal-points-show"
+    },
+    {
+        "route": "users",
+        "name": "users"
+    },
+    {
+        "route": "posts",
+        "name": "posts"
+    },
+    {
+        "route": "jobs",
+        "name": "jobs"
+    },
+    {
+        "route": "roles-permissions",
+        "name": "roles-permissons"
+    },
+    {
+        "route": "roles",
+        "name": "roles.index"
+    },
+    {
+        "route": "roles/create",
+        "name": "roles.create"
+    },
+    {
+        "route": "roles.",
+        "name": "roles.store"
+    },
+    {
+        "route": "roles/{role}",
+        "name": "roles.show"
+    },
+    {
+        "route": "roles/{role}/edit",
+        "name": "roles.edit"
+    },
+    {
+        "route": "roles/{role}",
+        "name": "roles.update"
+    },
+    {
+        "route": "roles/{role}",
+        "name": "roles.destroy"
+    },
+    {
+        "route": "rutas",
+        "name": "rutas"
+    },
+    {
+        "route": "apply/{id}",
+        "name": "apply"
+    },
+    {
+        "route": "legal",
+        "name": "legal"
+    },
+    {
+        "route": "user-profile",
+        "name": "user-profile"
+    },
+    {
+        "route": "experiences",
+        "name": "experiences"
+    },
+    {
+        "route": "user-applies",
+        "name": "user-applies"
+    },
+    {
+        "route": "user-skills",
+        "name": "user-skills"
+    },
+    {
+        "route": "skills",
+        "name": "skills"
+    },
+    {
+        "route": "categories",
+        "name": "categories"
+    },
+    {
+        "route": "admin-candidates/{id}",
+        "name":"admin-candidates"}
+    ]

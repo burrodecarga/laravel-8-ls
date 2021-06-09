@@ -14,7 +14,7 @@
                         </th>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
-                            User
+                            Role Users
                         </th>
 
                         <th scope="col" class="relative px-6 py-3">
@@ -34,7 +34,6 @@
                         <td class="px-6 py-4 ">
                             <div class="text-sm text-gray-500">
                                 {{$role->count_user}}
-                                4
                             </div>
                         </td>
 

@@ -59,7 +59,7 @@
             <tr>
                 <td class="px-6 py-4 whitespace-nowrap">
                     <div class="flex items-center">
-                        <div class="flex-shrink-0 h-10 w-10">
+                        <div class="flex-shrink-0 h-10 w-10" x-show="!photoPreview">
                             <img class="h-10 w-10 rounded-full" src="{{$user->profile_photo_url}}"
                                 alt="{{$user->name}}">
                         </div>
@@ -79,7 +79,11 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                     <span
                         class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                        {{$user->role}}
+                        @if($user->roles)
+                          @foreach ($user->roles as $r)
+                              {{$r->name}}
+                          @endforeach
+                        @endif
                     </span>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">

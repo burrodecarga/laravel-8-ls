@@ -2,21 +2,20 @@
     <div class="flex flex-col">
         <a href="{{url('posts')}}"
             class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Offers</a>
-        <a href="{{route('user-skills')}} "
-            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">skills</a>
-        <a href="{{route('resume')}}"
-            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Resume</a>
-        <a href="{{route('user-files')}}"
-            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Pdf
-            Files</a>
+        <a href="{{url('/users')}} "
+            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Users</a>
+        <a href="{{route('jobs')}}"
+            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Jobs</a>
+        <a href="{{route('roles.index')}}"
+            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Roles</a>
         <hr class="border-2 m-5 bg-orange-900" />
 
-        <a href="{{url('/legal')}}"
-            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Legal
-            Files</a>
+        <a href="{{url('/skills')}}"
+            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">skills
+            </a>
 
-        <a href="{{url('/user-applies')}}"
-            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">My Applies
+        <a href="{{url('/categories')}}"
+            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Categories
             jobs</a>
     </div>
 </div>

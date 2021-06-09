@@ -15,7 +15,7 @@ class ListOfSkills extends Component
 
         $skills = auth()->user()->tags;
 
-        return view('livewire.list-of-skills',['skills'=>$skills]);
+        return view('livewire.list-of-skills',['skills'=>$skills])->layout('layouts.cpp');
     }
 
     public function destroy(Tag $tag){

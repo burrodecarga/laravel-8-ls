@@ -45,9 +45,7 @@ class ShowJob extends Component
 
     public function applyJob()
     {
-
-        dd('');
-        $this->emit('render');
+  $this->emit('render');
         $this->showJob = '';
         $this->emit('alert', 'Job offer was updated successfully');
         $this->reset();
@@ -56,7 +54,7 @@ class ShowJob extends Component
 
     public function apply($id)
     {
-       
+
     }
 
 }

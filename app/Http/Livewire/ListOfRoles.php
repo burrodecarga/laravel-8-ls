@@ -13,10 +13,7 @@ class ListOfRoles extends Component
     public function render()
     {
         $roles = Role::all();
-        $roles = $roles->each(function($role){
-            $role->cont_user = User::role($role->name)->count();
-        });
-        return view('livewire.list-of-roles',compact('roles'));
+        return view('livewire.list-of-roles',compact('roles'))->layout('layouts.cpp');
     }
 
     public function showRole(Role $role)
