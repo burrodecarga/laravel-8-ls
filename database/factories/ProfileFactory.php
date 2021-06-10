@@ -26,6 +26,8 @@ class ProfileFactory extends Factory
         return [
             'user_id' =>User::factory(),
             'address'=>$this->faker->address(),
+            'city'=>$this->faker->city(),
+            'country'=>$this->faker->country(),
             'phone'=>$this->faker->phoneNumber(),
             'mobile'=>$this->faker->e164PhoneNumber(),
             'birthdate'=>$this->faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null),

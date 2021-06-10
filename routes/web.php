@@ -25,6 +25,7 @@ use App\Http\Livewire\UserExperience;
 use App\Http\Livewire\UserFiles;
 use App\Http\Livewire\UserProfile;
 use App\Http\Livewire\UserSkills;
+use App\Models\User;
 use PharIo\Manifest\Url;
 
 Route::get('/', function () {
@@ -153,4 +154,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/jobMe', function (){
 Route::middleware(['auth:sanctum', 'verified'])->get('/employerMe', function (){
     auth()->user()->assignRole('employer');
     return back();
+ });
+
+ Route::middleware(['auth:sanctum', 'verified','role:candidate|employer'])->get('/user/pdf/resume/{id}', function ($id){
+   $user = User::find($id);
+   return view('users.pdf.resume',compact('user'));
  });

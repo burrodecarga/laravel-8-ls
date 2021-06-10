@@ -53,6 +53,13 @@
 
         @endif
 <x-labor-staffers-s2 />
+@auth
+@unlessrole('candidate|employer|super-admin|guest|admin')
+    <x-labor-staffers-role/>
+@else
+    <x-labor-staffers-i/>
+@endunlessrole
+@endauth
 
         <!-- Page Content -->
 

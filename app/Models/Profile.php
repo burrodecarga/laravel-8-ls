@@ -19,6 +19,8 @@ class Profile extends Model
         'cost',
         'availability',
         'title',
+        'city',
+        'country',
     ];
 
     /* protected $dates = [

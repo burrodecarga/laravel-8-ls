@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Experience extends Model
 {
@@ -14,8 +15,8 @@ class Experience extends Model
        'company',
        'position',
        'description',
-        'date_begin',
-        'date_end',
+       'date_begin',
+       'date_end',
     ];
 
 
@@ -24,4 +25,16 @@ class Experience extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getDateBeginAttribute($value)
+{
+    $date = Carbon::parse($value)->format('d-m-Y');
+        return $date;
+}
+
+public function getDateEndAttribute($value)
+{
+    $date = Carbon::parse($value)->format('d-m-Y');
+        return $date;
+}
 }

@@ -38,6 +38,20 @@
                 <x-jet-input-error for="mobile" class="mt-2" />
             </div>
 
+            <div class="col-start-1 col-end-8 md:col-start-1 md:col-end-4 ">
+                <x-jet-label for="country" value="{{ __('country') }}" />
+                <x-jet-input id="country" type="text" class="mt-1 block w-full" wire:model.defer="country"
+                    autocomplete="country" />
+                <x-jet-input-error for="country" class="mt-2" />
+            </div>
+
+            <div class="col-start-1 col-end-8 md:col-start-4 ">
+                <x-jet-label for="city" value="{{ __('city') }}" />
+                <x-jet-input id="city" type="text" class="mt-1 block w-full" wire:model.defer="city"
+                    autocomplete="city" />
+                <x-jet-input-error for="city" class="mt-2" />
+            </div>
+
             <div class="col-start-1 col-end-8 md:col-end-4 ">
                 <x-jet-label for="birthdate" value="{{ __('birthdate') }}" />
                 <x-jet-input id="birthdate" type="date" class="mt-1 block w-full" wire:model.defer="birthdate"
@@ -45,7 +59,7 @@
                 <x-jet-input-error for="birthdate" class="mt-2" />
             </div>
 
-            <div class="col-start-1 col-end-8 md:col-start-4 py-1 ">
+            <div class="col-start-1 col-end-8 md:col-start-4 md:col-end-6 py-1 ">
                 <x-jet-label for="cost" value="{{ __('availability') }}" />
 
                 <select class="rounded" wire:model.defer="availability">
@@ -57,16 +71,16 @@
                 <x-jet-input-error for="'availability" class="mt-2" />
             </div>
 
-            <div class="col-start-1 col-end-8 md:col-end-4">
+            <div class="col-start-1 col-end-8 md:col-start-6 md:col-end-8">
                 <x-jet-label for="cost" value="{{ __('Hourly Rate') }}" />
                 <x-jet-input id="cost" type="text" class="block w-full" wire:model.defer="cost"
                     autocomplete="cost" placeholder="Hourly Rate $/hrs" />
                 <x-jet-input-error for="cost" class="mt-2" />
             </div>
 
-            <div class="col-start-1 col-end-8 md:col-start-4">
-                <x-jet-label for="cost" value="{{ __('Modify Profile') }}" />
-                <button type="submit" class="bg-blue-800 hover:bg-orange-900 text-white py-2 px-11 rounded ">Save</button>
+            <div class="float-right">
+
+                <button type="submit" class="bg-green-800 hover:bg-orange-900 text-white py-2 px-11 rounded ">Save</button>
             </div>
         </form>
 
