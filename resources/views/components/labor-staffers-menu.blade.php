@@ -24,7 +24,7 @@
             <ul>
                 <li><a class="text-white" href="{{url('/dashboard')}}">Home</a></li>
                 <li><a class="text-white" href="{{ url('/about')}} ">About us</a></li>
-                @hasanyrole('candidate|employer')
+                @hasanyrole('candidate')
                 <li><a class="text-white" href="./jobs/">Jobs</a></li>
                 @endhasanyrole
                 @hasanyrole('candidate')
@@ -39,9 +39,13 @@
                 @endhasanyrole
                   @auth
                 <li><a class="text-white" href="{{route('profile.show')}}">perfil</a></li>
-                @hasanyrole('candidate|employer')
+                @hasanyrole('candidate')
                 <li><a class="text-white mr-4" href="{{route('user-profile')}}">profile</a></li>
                 @endhasanyrole
+                @hasanyrole('employer')
+                <li><a class="text-white mr-4" href="{{route('employer-posts')}}">My Offers</a></li>
+                @endhasanyrole
+
                 @hasanyrole('admin|super-admin')
                 <li><a class="text-white" href="{{route('admin')}}">admin</a></li>
  <li>           @endhasanyrole

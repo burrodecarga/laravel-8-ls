@@ -30,7 +30,7 @@ class CreatePostsTable extends Migration
 
             $table->string('state');
             $table->string('city');
-            $table->integer('active');
+            $table->integer('active')->default(0);
             $table->timestamps();
         });
     }

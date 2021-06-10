@@ -44,7 +44,7 @@ class PostFactory extends Factory
             'class' => $schedule->class,
             'body' => $this->faker->text(),
             'state' => $state->name,
-            'city' => $this->faker->word(),
+            'city' => $this->faker->city(),
             'active' => 1
         ];
     }

@@ -18,4 +18,5 @@ class Candidate extends User
     {
         return $this->belongsTo(User::class);
     }
+
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Livewire\AdminCandidate;
 use App\Http\Livewire\CategoryList;
 use App\Http\Livewire\ContactUs;
+use App\Http\Livewire\EmployerPosts;
 use App\Http\Livewire\FocalPoits;
 use App\Http\Livewire\FocalPoitsShow;
 use App\Http\Livewire\ListOfPosts;
@@ -123,7 +124,7 @@ Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/legal',S
 Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/user-profile',UserProfile::class)->name('user-profile');
 
 Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/experiences',UserExperience::class)->name('experiences');
-Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/user-applies',UserApplies::class)->name('user-applies');
+Route::middleware(['auth:sanctum', 'verified','role:candidate|employer'])->get('/user-applies',UserApplies::class)->name('user-applies');
 
 Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/user-skills',UserSkills::class)->name('user-skills');
 
@@ -139,3 +140,17 @@ Route::get(
     '/admin-candidates/{id}',
     [AdminController::class, 'show']
 )->name('admin-candidates')->middleware(['role:admin|super-admin']);
+
+
+Route::middleware(['auth:sanctum', 'verified','role:employer'])->get('/employer-posts',EmployerPosts::class)->name('employer-posts');
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/jobMe', function (){
+   auth()->user()->assignRole('candidate');
+   return back();
+});
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/employerMe', function (){
+    auth()->user()->assignRole('employer');
+    return back();
+ });

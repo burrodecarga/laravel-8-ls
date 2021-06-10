@@ -73,4 +73,6 @@ class Post extends Model
                     ->where('user_id',auth()->user()->id);
     }
 
+    
+
 }

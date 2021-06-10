@@ -9,6 +9,14 @@
     </x-slot>
     <x-labor-staffers-s1/>
     <x-labor-staffers-taps />
+@auth
+@unlessrole('candidate|employer|super-admin|guest|admin')
+    <x-labor-staffers-role/>
+@else
+    <x-labor-staffers-i/>
+@endunlessrole
+@endauth
+
    @livewire('home-page')
 
 
