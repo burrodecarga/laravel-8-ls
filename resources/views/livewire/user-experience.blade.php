@@ -122,8 +122,6 @@
                         class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">Profile</a>
                     <a href="{{route('user-skills')}}"
                         class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">skills</a>
-                    <a href="#"
-                        class="bg-blue-400 hover:bg-blue-700 text-center text-white font-bold rounded mb-3 py-2 px-4">skill</a>
                 </div>
             </div>
         </div>

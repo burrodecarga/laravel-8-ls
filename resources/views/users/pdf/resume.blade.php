@@ -265,9 +265,13 @@
                 <br>
                 <span class="print-instruction"><strong>Note:</strong> This Resume is print-friendly and PDF-optimized. PDF file can be generated easily using Google Chrome by right-click on this page, select "Print...", then select "Save as PDF" as Destination.</span>
             </div>
+             <div class="sectionLine"></div>
+            <a id="boton" href="{{url('/')}}" style="display: block;" >Home</a>
         </div>
-        <a href="{{url('/')}}" class="py-3 px-4 rounded text-center btn">Home</a>
+    </div>
+</div>
+
         <link href="{{asset('assets/resume/style.css')}}" rel="stylesheet">
-        
+
 
 

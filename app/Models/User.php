@@ -12,6 +12,7 @@ use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
+
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -67,13 +68,13 @@ class User extends Authenticatable
     {
        if($termino === ''){ return;}
        return $query->where('name','like',"%{$termino}%")
-                   ->orWhere('name','like',"%{$termino}%");
+                   ->orWhere('email','like',"%{$termino}%");
     }
 
     public function scopeRole($query,$role)
     {
         if($role === ''){ return;}
-        return $query->where('role',$role);
+        return $query->hasAnyRole($role);
     }
 
     public function posts()

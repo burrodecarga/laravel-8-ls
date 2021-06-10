@@ -141,7 +141,7 @@
                 Here is a list of the most common questions asked in interviews and guidelines on how to answer them...
             </p>
             <div class="flex items-center justify-between text-center text-xs font-bold uppercase">
-                <a href="{{url('/interview')}}"
+                <a href="{{url('/interview-prepare')}}"
                     class="btnPage bg-orange-900 py-6 w-60 text-center  text-white text-sm font-bold uppercase hover:bg-blue-600  float-left my-2">Read
                     more...
                 </a>

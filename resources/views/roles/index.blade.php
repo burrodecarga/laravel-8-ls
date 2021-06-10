@@ -71,5 +71,8 @@
                 </table>
             </div>
     </div>
-
+    <div class="col-span-5 md:col-start-5 my-auto">
+        <h1 class="text-2xl font-bold my-3 text-center">Roles</h1><hr class="my-3">
+        <x-admin-nav-menu />
+    </div>
 </x-cpp-layout>

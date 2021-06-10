@@ -1,5 +1,5 @@
 <form wire:submit.prevent="updatePost">
-    <x-jet-dialog-modal wire:model="showJob">
+    <x-dialog-modal wire:model="showJob">
 
     <x-slot name="title">
         <div class="sm:flex sm:items-start md:items-center">

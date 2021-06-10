@@ -25,8 +25,7 @@ class ListOfUsers extends Component
 
     public function render()
     {
-        $users = User::termino($this->search)
-                ->role($this->user_role);
+        $users = User::termino($this->search);
 
         if ($this->campo && $this->order) {
             $users = $users->orderBy($this->campo, $this->order);

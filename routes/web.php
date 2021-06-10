@@ -82,7 +82,7 @@ Route::get('/successfull-cv', function () {
     return view('successfull-cv')->layout('layouts.cpp');
 });
 
-Route::middleware(['auth:sanctum', 'verified','role:admin'])->get('/admin', function () {
+Route::middleware(['auth:sanctum', 'verified','role:admin|super-admin'])->get('/admin', function () {
     return view('admin')->layout('layouts.cpp');
 })->name('admin');
 
@@ -108,7 +108,7 @@ Route::middleware(['auth:sanctum', 'verified','role:admin|super-admin'])->get('/
 
 Route::middleware(['auth:sanctum', 'verified','role:super-admin|admin'])->get('/posts',ListOfPosts::class)->name('posts');
 
-Route::middleware(['auth:sanctum', 'verified','role:candidate|employers'])->get('/jobs',ListOfJobs::class)->name('jobs');
+Route::middleware(['auth:sanctum', 'verified','role:candidate|employers|super-admin'])->get('/jobs',ListOfJobs::class)->name('jobs');
 
 Route::middleware(['auth:sanctum', 'verified','role:super-admin|admin'])->get('/roles-permissions',ListOfRoles::class)->name('roles-permissons');
 
@@ -140,7 +140,7 @@ Route::middleware(['auth:sanctum', 'verified','role:admin|super-admin'])
 Route::get(
     '/admin-candidates/{id}',
     [AdminController::class, 'show']
-)->name('admin-candidates')->middleware(['role:admin|super-admin']);
+)->name('admin-candidates')->middleware(['role:admin|super-admin|employer']);
 
 
 Route::middleware(['auth:sanctum', 'verified','role:employer'])->get('/employer-posts',EmployerPosts::class)->name('employer-posts');
@@ -159,4 +159,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/employerMe', function (){
  Route::middleware(['auth:sanctum', 'verified','role:candidate|employer'])->get('/user/pdf/resume/{id}', function ($id){
    $user = User::find($id);
    return view('users.pdf.resume',compact('user'));
- });
+ })->name('user.pdf.resume');
+
+
+ Route::middleware(['auth:sanctum', 'verified','role:candidate|employer'])->get('/user/resume/{id}', function ($id){
+    $user = User::find($id);
+    return view('livewire.user-cv',compact('user'));
+  })->name('user.resume');
+
+
+

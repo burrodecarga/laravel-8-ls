@@ -13,10 +13,6 @@ class UserCv extends Component
         $profile = $user->profile;
         $tags = $user->tags;
 
-        return view('livewire.user-cv',[
-            'experiences' =>$experiences,
-            'profile' =>$profile,
-            'tags' =>$tags
-        ])->layout('layouts.cpp');
+        return view('livewire.user-cv')->layout('layouts.cpp');
     }
 }

@@ -1,3 +1,5 @@
+<div class="grid grid-cols-1 md:grid-cols-7 gap-2">
+    <div class="col-span-7 md:col-span-6">
 <x-table>
     <x-marco>
         <div class="flex flex-1 mx-2 text-sm items-center">
@@ -34,7 +36,7 @@
                 wire:click="clear">
                 clear
             </button>
-            @livewire('create-post')
+
         </div>
     </x-marco>
     @if (!$posts->count())
@@ -157,5 +159,14 @@
     @endif
 </x-table>
 @livewire('show-post')
+</div>
+<div class="col-span-7 md:col-start-7 my-auto">
+    <div class="text-center">
+        <h1 class="text-2xl font-bold mb-16">List of Posts</h1><hr class="my-3">
+    @livewire('create-post')
+    </div>
+    <x-admin-nav-menu />
+</div>
+</div>
 
 

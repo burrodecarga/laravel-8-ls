@@ -261,3 +261,15 @@ code {
 		display: none;
 	}
 }
+
+
+#boton{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 30px auto;
+    text-align: center;
+    background-color: green;
+    color:white
+}

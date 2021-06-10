@@ -1,13 +1,18 @@
 <x-cpp-layout>
-   <div class="caja80 p-4 ">
-       <h2 class="text-orange-900 text-xl sm:text-2xl font-bold">candidates who applied for : {{$post->title}}</h2>
-       <h2 class="text-gray-400 text-xl sm:text-xl font-bold">{{$post->state}} : {{$post->city}}</h2>
-       <h2 class="text-gray-400 text-xl sm:text-xl font-bold">{{$post->min_salary}} $ : {{$post->max_salary}} $ - {{$post->schedule}}</h2>
-       <p class="text-gray-500 mt-5 text-justify">{{$post->body}}</p>
-       <p class="text-gray-500 mt-5 text-justify">{{$post->responsibilities}}</p>
-       <p class="text-gray-500 mt-5 text-justify">{{$post->qualifications}}</p>
+   <div class="caja80 p-4 mx-auto">
+       <h2 class="text-gray-500 text-xl sm:text-xl font-bold">Candidates:</h2><hr>
+            <h2 class="text-orange-900 text-xl sm:text-xl font-bold"> {{$post->title}}</h2><hr>
+       <h2 class="text-gray-400 text-xl sm:text-sm font-bold">{{$post->state}} : {{$post->city}}</h2><hr>
+       <h2 class="text-gray-400 text-xl sm:text-sm font-bold">{{$post->min_salary}} $ : {{$post->max_salary}} $</h2><hr class="my-1">
+
+                  <span class="text-white text-sm px-3 py-1 rounded {{$post->class}}">{{$post->schedule}}</span>
+
+
+       <p class="text-gray-500 mt-5 text-justify"><strong>Body: </strong> {{$post->body}}</p>
+       <p class="text-gray-500 mt-5 text-justify"><strong>Resposabilities: </strong>{{$post->responsibilities}}</p>
+       <p class="text-gray-500 mt-5 text-justify"><strong>Qualifications: </strong>{{$post->qualifications}}</p>
    </div>
-   <div class="caja80 p-4 ">
+   <div class="caja80 p-4 mx-auto">
        <x-table>
     <table class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
@@ -62,14 +67,12 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                     <span
                         class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                        {{$user->resume}}
+                        {{$user->profile?->title}}
                     </span>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {{$user->id}}
+                   <a href="{{route('user.resume',$user->id)}}">Ir</a>
                 </td>
-
-
             </tr>
             @endforeach
 

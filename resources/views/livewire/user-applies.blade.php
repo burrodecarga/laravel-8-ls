@@ -14,7 +14,9 @@
                         <div class="ml-4">
                             <div class="text-sm text-gray-900 font-bold">
                                 {{$post->title}}<br>
+                                @if($post->pivot->created_at)
                              <span class="font-medium">  {{$post->pivot->created_at->subMinutes(2)->diffForHumans()}}</span>
+                             @endif
 
                             </div>
                             <div class="text-sm text-gray-500">

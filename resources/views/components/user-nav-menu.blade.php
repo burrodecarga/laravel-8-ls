@@ -6,7 +6,7 @@
                 class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">experiences</a>
             <a href="{{route('user-skills')}} "
                 class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">skills</a>
-            <a href="{{route('resume')}}"
+            <a href="{{route('user.pdf.resume',auth()->user()->id)}}"
                 class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Resume</a>
             <a href="{{route('user-files')}}"
                 class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Pdf

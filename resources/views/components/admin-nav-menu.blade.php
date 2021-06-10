@@ -15,7 +15,6 @@
             </a>
 
         <a href="{{url('/categories')}}"
-            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Categories
-            jobs</a>
+            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Categories</a>
     </div>
 </div>
