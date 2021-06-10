@@ -25,7 +25,7 @@
                 <li><a class="text-white" href="{{url('/dashboard')}}">Home</a></li>
                 <li><a class="text-white" href="{{ url('/about')}} ">About us</a></li>
                 @hasanyrole('candidate')
-                <li><a class="text-white" href="./jobs/">Jobs</a></li>
+                <li><a class="text-white" href="/offers">Jobs</a></li>
                 @endhasanyrole
                 @hasanyrole('candidate')
                 <li><a class="text-white" href="{{url('/candidates')}}">Candidates</a></li>

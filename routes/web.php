@@ -14,6 +14,7 @@ use App\Http\Livewire\FocalPoitsShow;
 use App\Http\Livewire\ListOfPosts;
 use App\Http\Livewire\ListOfRoles;
 use App\Http\Livewire\ListOfSkills;
+use App\Http\Livewire\ListOfOffers;
 use App\Http\Livewire\ListOfUsers;
 use App\Http\Livewire\ShowJob;
 use App\Http\Livewire\ShowLegal;
@@ -26,7 +27,8 @@ use App\Http\Livewire\UserFiles;
 use App\Http\Livewire\UserProfile;
 use App\Http\Livewire\UserSkills;
 use App\Models\User;
-use PharIo\Manifest\Url;
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
     return view('welcome')->layout('layouts.bpp');
@@ -110,6 +112,9 @@ Route::middleware(['auth:sanctum', 'verified','role:super-admin|admin'])->get('/
 
 Route::middleware(['auth:sanctum', 'verified','role:candidate|employers|super-admin'])->get('/jobs',ListOfJobs::class)->name('jobs');
 
+Route::middleware(['auth:sanctum', 'verified','role:candidate|employers'])->get('/offers',ListOfOffers::class)->name('offers');
+
+
 Route::middleware(['auth:sanctum', 'verified','role:super-admin|admin'])->get('/roles-permissions',ListOfRoles::class)->name('roles-permissons');
 
 
@@ -167,5 +172,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/employerMe', function (){
     return view('livewire.user-cv',compact('user'));
   })->name('user.resume');
 
+  Route::get('/contact', function(){
+   $correo = new ContactanosMailable();
+   Mail::to('edwinhenriquezh@gmail.com')->send($correo);
+   return "mensaje EnviADO";
+
+  });
 
 

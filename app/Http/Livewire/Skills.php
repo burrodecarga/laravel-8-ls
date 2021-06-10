@@ -25,7 +25,7 @@ class Skills extends Component
     public function render()
     {
         $categories = Category::orderBy('name')->get();
-        $skills = Skill::orderBy('created_at','desc')->paginate(100);
+        $skills = Skill::orderBy('category','desc')->paginate(10);
         //$res = Skill::all('id','category_id','category','name','slug')->toJson();
        //dump($res);
         return view('livewire.skills',[

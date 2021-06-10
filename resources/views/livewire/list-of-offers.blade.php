@@ -1,5 +1,3 @@
-<div class="grid grid-cols-1 md:grid-cols-5 gap-2">
-    <div class="col-span-5 md:col-span-4">
         <div class="relative">
             <x-table>
                 <x-marco>
@@ -160,15 +158,4 @@
             @livewire('show-job-page')
         </div>
     </div>
-    @hasanyrole('admin|super-admin')
-    <div class="col-span-5 md:col-start-5 my-auto">
-        <h1 class="text-2xl font-bold mb-16 text-center">List of Jobs</h1><hr class="my-3">
-        <x-admin-nav-menu />
-    </div>
-    @else
-    <div class="col-span-5 col-start-1 md:col-start-5">
-        <h1 class="text-2xl font-bold mb-6 mt-6 text-center">List of Jobs</h1><hr class="my-1">
-        <x-user-nav-menu />
-    </div>
-    @endhasanyrole
-</div>
+

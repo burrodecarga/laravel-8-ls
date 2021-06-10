@@ -9,7 +9,7 @@ class Response extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['message_id','asunto','body'];
+    protected $fillable = ['message_id','subject','body','read'];
 
 
     public function message()

@@ -16,8 +16,9 @@ class CreateResponsesTable extends Migration
         Schema::create('responses', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('message_id');
-            $table->string('title');
+            $table->string('subject');
             $table->longText('body');
+            $table->integer('read')->default(0);
             $table->timestamps();
             $table->foreign('message_id')->references('id')->on('messages')->onDelete('cascade');
         });
