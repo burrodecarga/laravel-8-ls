@@ -128,4 +128,8 @@ class User extends Authenticatable
         return $this->hasMany(Apply::class);
     }
 
+
+
+
+
 }

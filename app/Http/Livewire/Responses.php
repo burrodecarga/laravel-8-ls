@@ -2,12 +2,18 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Message;
+use App\Models\Response;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Responses extends Component
 {
+    use WithPagination;
     public function render()
     {
-        return view('livewire.responses');
+        $messages = Message::orderBy('created_at','desc')->where('user_id',auth()->user()->id)
+        ->orderBy('read','asc')->paginate(2);
+        return view('livewire.responses', compact('messages'))->layout('layouts.cpp');
     }
 }

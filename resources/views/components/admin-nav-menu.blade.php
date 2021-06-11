@@ -2,6 +2,8 @@
     <div class="flex flex-col">
         <a href="{{url('posts')}}"
             class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Offers</a>
+            <a href="{{url('messages')}}"
+            class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Messages</a>
         <a href="{{url('/users')}} "
             class="bg-blue-700 hover:bg-orange-900 text-center text-white font-bold rounded mb-3 py-2 px-4">Users</a>
         <a href="{{route('jobs')}}"

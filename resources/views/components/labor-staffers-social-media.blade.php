@@ -5,6 +5,11 @@
     </div>
     {{-- right --}}
     <div class="flex">
+        @auth
+
+  @livewire('campanita')
+
+        @endauth
         <a href="https://www.facebook.com/laborstaffers/"><i class="fab fa-facebook-square ml-6 text-white hover:text-orange-900 text-xl p-2 "></i></a>
         <a href="https://www.instagram.com/laborstaffers/"><i class="fab fa-instagram ml-6 text-white hover:text-orange-900 text-xl p-2 "></i></a>
         <a href="https://twitter.com/laborstaffers"><i class="fab fa-twitter ml-6 text-white hover:text-orange-900 text-xl p-2 "></i></a>

@@ -24,4 +24,8 @@ public function responses()
     return $this->hasMany(Response::class);
 }
 
+public function scopePendientes($query){
+    return $query->where('read',0);
+}
+
 }
