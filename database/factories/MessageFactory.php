@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Message;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class MessageFactory extends Factory
@@ -22,7 +23,10 @@ class MessageFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'subject' =>$this->faker->jobTitle(),
+            'body' =>$this->faker->text(150),
+            'user_id' =>User::factory()
+
         ];
     }
 }

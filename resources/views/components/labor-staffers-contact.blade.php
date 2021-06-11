@@ -27,7 +27,7 @@
         </div>
         <div>
             <x-jet-danger-button wire:click="create()" wire:loading.attr="disabled">
-                Save
+                Send
             </x-jet-danger-button>
     </form>
 </div>

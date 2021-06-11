@@ -14,7 +14,7 @@ class ContactUs extends Component
 
     protected  $rules = [
         'title' => 'required|max:100',
-        'body' => 'required|min:100'];
+        'body' => 'required|min:10'];
 
     public function render()
     {
@@ -30,9 +30,10 @@ class ContactUs extends Component
     public function create(){
         $this->validate();
         Message::create([
-            'title' => $this->title,
+            'subject' => $this->title,
             'body' => $this->body,
-            'user_id' => auth()->user()->id
+            'user_id' => auth()->user()->id,
+            'read' =>0
         ]);
         $this->emit('alert', 'Yor message was send successfully');
         $this->reset();

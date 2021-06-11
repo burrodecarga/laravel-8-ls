@@ -16,6 +16,8 @@ use App\Http\Livewire\ListOfRoles;
 use App\Http\Livewire\ListOfSkills;
 use App\Http\Livewire\ListOfOffers;
 use App\Http\Livewire\ListOfUsers;
+use App\Http\Livewire\MessageResponse;
+use App\Http\Livewire\Messages;
 use App\Http\Livewire\ShowJob;
 use App\Http\Livewire\ShowLegal;
 use App\Http\Livewire\SkillList;
@@ -55,6 +57,16 @@ Route::get('/services', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/contact', ContactUs::class);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/messages', Messages::class)->name('messages-list');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/message-response/{message}', MessageResponse::class)->name('message-read');
+
+
+
+
+
+
 
 Route::get('/skype-interview', function () {
     return view('skype-interview')->layout('layouts.cpp');
@@ -130,6 +142,7 @@ Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/legal',S
 Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/user-profile',UserProfile::class)->name('user-profile');
 
 Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/experiences',UserExperience::class)->name('experiences');
+
 Route::middleware(['auth:sanctum', 'verified','role:candidate|employer'])->get('/user-applies',UserApplies::class)->name('user-applies');
 
 Route::middleware(['auth:sanctum', 'verified','role:candidate'])->get('/user-skills',UserSkills::class)->name('user-skills');
@@ -139,7 +152,6 @@ Route::middleware(['auth:sanctum', 'verified','role:admin|super-admin'])->get('/
 
 Route::middleware(['auth:sanctum', 'verified','role:admin|super-admin'])
 ->get('/categories',CategoryList::class)->name('categories');
-
 
 
 Route::get(
@@ -172,11 +184,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/employerMe', function (){
     return view('livewire.user-cv',compact('user'));
   })->name('user.resume');
 
-  Route::get('/contact', function(){
-   $correo = new ContactanosMailable();
-   Mail::to('edwinhenriquezh@gmail.com')->send($correo);
-   return "mensaje EnviADO";
+//   Route::get('/contact', function(){
+//    $correo = new ContactanosMailable();
+//    Mail::to('edwinhenriquezh@gmail.com')->send($correo);
+//    return "mensaje EnviADO";
 
-  });
+//   });
 
 
