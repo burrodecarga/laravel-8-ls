@@ -16,4 +16,11 @@ class Responses extends Component
         ->orderBy('read','asc')->paginate(2);
         return view('livewire.responses', compact('messages'))->layout('layouts.cpp');
     }
+
+    public function marcar(Response $response){
+
+        $response->read = 1;
+        $response->save();
+        $this->render();
+    }
 }

@@ -18,7 +18,7 @@
                         <span class="divider">|</span>
                         <span class="phone">{{$user->profile?->phone}}</span>
                         <span class="divider">|</span>
-                        <span class="address">{{$user->profile->city}},{{$user->profile->country}}</span>
+                        <span class="address">{{$user->profile?->city}},{{$user->profile?->country}}</span>
                     </div>
                     {{-- <div id="profilesBlock">
                         <span class="url"><a href="http://cybercz-resume.ml">https://cybercz-resume.ml</a></span>
@@ -39,7 +39,7 @@
                     <!-- <p>Programmer by profession, blogger by soul</p> -->
                     <!-- <p>Lunatic nerd with cringe humor <br>Weekend zombie</p> -->
                     <!-- <p>Striving hard to make an impact, coding in shadows.</p> -->
-                    <p>{{$user->profile->title}}</p>
+                    <p>{{$user->profile?->title}}</p>
 
                     <!--
                         <p><strong>Personal Opinions:</strong></p>

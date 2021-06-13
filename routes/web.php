@@ -181,13 +181,19 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/employerMe', function (){
 
  Route::middleware(['auth:sanctum', 'verified','role:candidate|employer'])->get('/user/pdf/resume/{id}', function ($id){
    $user = User::find($id);
-   return view('users.pdf.resume',compact('user'));
+   if($user->profile){
+   return view('users.pdf.resume',compact('user'));}else{
+       return back()->with('success','No Profile....');
+   }
  })->name('user.pdf.resume');
 
 
  Route::middleware(['auth:sanctum', 'verified','role:candidate|employer'])->get('/user/resume/{id}', function ($id){
     $user = User::find($id);
-    return view('livewire.user-cv',compact('user'));
+    if($user->profile){
+    return view('livewire.user-cv',compact('user'));}else{
+        return back()->with('success','No Profile....');
+    }
   })->name('user.resume');
 
 //   Route::get('/contact', function(){

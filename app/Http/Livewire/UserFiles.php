@@ -3,7 +3,6 @@
 namespace App\Http\Livewire;
 
 use App\Models\File;
-use Illuminate\Support\Facades\File as FacadesFile;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -25,13 +24,12 @@ class UserFiles extends Component
     public function store()
     {
 
-
       $values = $this->validate($this->rules);
 
       $name = ($values['archivo'])->getClientOriginalName();
       $this->resume ? $valor =1: $valor=0;
       //dd($valor);
-      $path = ($this->archivo)->store('user-pdf');
+      $path =  $this->archivo->store('files', 'public');
       $ojeto = new File();
       $ojeto->name = $name;
       $ojeto->path = $path;
@@ -46,7 +44,10 @@ class UserFiles extends Component
 
     public function destroy(File $file)
     {
-        Storage::delete($file);
+
+        //dd(storage_path($file->path));
+        //Storage::delete($file->path);
+        Storage::disk('public')->delete($file->path);
         $file->delete();
         $this->emit('alert', 'file was deleted correctly');
       $this->reset();

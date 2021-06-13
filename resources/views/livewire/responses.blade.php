@@ -78,6 +78,11 @@
                                                 class="text-xs text-gray-400 italic font-medium block">
                                                 {{$r->created_at->subMinutes(2)->diffForHumans()}}</span><br>
                                             <div class="text-sm font-medium text-gray-400">{{$r->body}}</div>
+                                            @if($r->read==0)
+                                            <input type="checkbox" wire:click="marcar({{$r->id}})" >mark
+                                            @else
+                                            <i class="fas fa-check"></i>
+                                            @endif
                                         </li>
                                         @endforeach
                                     </ul>

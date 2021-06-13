@@ -26,4 +26,8 @@ class AdminCandidate extends Component
     {
         alert('xxx');
     }
+
+    public function export($file){
+        dd($file);
+    }
 }
