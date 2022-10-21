@@ -35,7 +35,8 @@ use App\Models\Response;
 use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
-    return view('welcome')->layout('layouts.bpp');
+return view('welcome')->layout('layouts.bpp');
+
 });
 
 Route::get('/home', function () {
